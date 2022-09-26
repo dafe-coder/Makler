@@ -1,0 +1,67 @@
+section.create-master-s 
+	.container 
+		.create-master 
+			.create-master__left
+				form(action="#" method="method")
+					h2 Регистрируйтес как мастер, <br>получите работы
+					p.subtitle Объявление будет доступно на <a href='makler.uz'>Makler.uz</a> и в наших <br>мобильных приложениях
+					.upload-avatar 
+						.upload-avatar__left
+							.avatar-circle
+								+icon('fi_user', 'fill-n')
+						.upload-avatar__right
+							p Загрузите фото профиля или <br>логотп компании
+							input(type='file' id='avatar')
+							label(for="avatar" name='user-avatar') Загрузить фото профиля
+					.create-master-inputs 
+						.form-input
+							label Имя Фамилия 
+							input(placeholder="Abbos Janizakov")
+						.form-input
+							label Электронная почта
+							input(placeholder="info@gmai.com")
+						.form-input
+							label Номер телефона |  Ваше логин
+							input(value='+998' placeholder="+998 90 123-45-67")
+						.form-input
+							label Пароль
+							input(type="password" placeholder="пусто")
+					.create-master-text.mb-50
+						label Краткое описание о себе
+						<textarea name="about_me" placeholder='пусто'></textarea> 
+					h4 Выберите раздел и специализацию *
+					.select 
+						label Введите род деятельности!
+						button.btn 
+							span деятельности
+							+icon('fi_chevron-down', 'w-12 fill-n')
+					.select 
+						label Опыт работы
+						button.btn 
+							span от 3 лет
+							+icon('fi_chevron-down', 'w-12 fill-n')
+					h5 Территория обслужование
+					.map.mb-50
+						.map-info
+							h5 Где находится?
+							.map-address
+								input(placeholder='г.Ташкент, ул.Охангарон 65 А 1')
+								button.btn.btn-black Сохранить
+						p.error-par Такой геолокации не существует
+						#map
+					.confirm-checkbox
+						input(type="checkbox" id= "confirm-data")
+						label(for='confirm-data') 
+							p Я прочитал и согласен с условиями использования <br> и публикации!
+							+icon('check', 'w-12')
+					.btns
+						button.btn.btn-black Сохранить как черновик
+						button.btn.btn-orange Опубликовать объявление 
+			.create-master__right
+				.info-box
+					h5 Краткое описание о нашем сервисе
+					h3 Регистрация как мастер
+					p.info-par Как только вы зарегистрируетесь в качестве мастера, вы сможете получать заказы по направлениям, введенным через наш портал!
+					.alert-info 
+						p Напоминаем, что мы не несем ответственности за сбор платы за услуги через этот портал!
+					p.info-par При регистрации вы вводите свой номер телефона в качестве логина и придумываете себе пароль. Нажав кнопку входа, вы введете свой номер телефона и пароль для доступа к существующему профилю.

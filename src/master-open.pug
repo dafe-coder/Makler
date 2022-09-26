@@ -1,0 +1,67 @@
+extends ./pug/templates/main
+
+block variables
+	- var title = 'Master opened'
+	- var pageClass = 'index-page'
+
+block content
+	include ./pug/modules/sections/11_open-master-info
+	include ./pug/modules/sections/12_slider
+	section.recommended-master-s
+		.container 
+			.recommended-master 
+				h5.section-title-sm Рекомендуем похожие
+				ul.masters-list 
+					li.masters-item
+						.masters-item-logo 
+							img(src="@img/avatar-big.png", alt="аватар")
+						.masters-item-info 
+							h5 Abduvali Eshonqulov
+							p Мастер, 3 года опыта
+						ul.open-tags 
+							li сантехник
+							li евро
+							li евро
+							li евро
+							li евро
+							li ремонт
+						p.masters-item-address Ташкент, Шайхантахурский район
+					li.masters-item
+						.masters-item-logo 
+							img(src="@img/avatar-big.png", alt="аватар")
+						.masters-item-info 
+							h5 Abduvali Eshonqulov
+							p Мастер, 3 года опыта
+						ul.open-tags 
+							li сантехник
+							li сантехник
+							li евро
+							li евро
+							li ремонт
+							li ремонт
+						p.masters-item-address Ташкент, Шайхантахурский район
+					li.masters-item
+						.masters-item-logo 
+							img(src="@img/avatar-big.png", alt="аватар")
+						.masters-item-info 
+							h5 Abduvali Eshonqulov
+							p Мастер, 3 года опыта
+						ul.open-tags 
+							li сантехник
+							li сантехник
+							li сантехник
+							li евро
+							li ремонт
+						p.masters-item-address Ташкент, Шайхантахурский район
+					li.masters-item
+						.masters-item-logo 
+							img(src="@img/avatar-big.png", alt="аватар")
+						.masters-item-info 
+							h5 Abduvali Eshonqulov
+							p Мастер, 3 года опыта
+						ul.open-tags 
+							li сантехник
+							li евро
+							li евро
+							li ремонт
+						p.masters-item-address Ташкент, Шайхантахурский район

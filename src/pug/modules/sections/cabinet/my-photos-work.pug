@@ -1,0 +1,18 @@
+section.photos-work-s.d-none#photos-work
+	.container-sm 
+		.photos-work 
+			.image-upload.mb-50
+				.image-outer 
+					.image-outer-info
+						h5 Перетащите сюда свои изображения или нажмите сюда
+						p Поддерживает: .jpg, .png, .jpeg
+					input(type="file" id='images' accept="image/png, image/jpeg, image/jpg" multiple)
+					label(for='images' ) открыть
+				.image-progress 
+					.files-name Uploading...
+						span img128371.jpg
+					.progress
+						progress(id="progress-bar" max=100 value=0)
+						.progress-bg
+							.progress-bar
+				ul.image-list#gallery

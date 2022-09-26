@@ -1,0 +1,30 @@
+// Colors
+$white: #ffffff;
+$black: #111111;
+$orange: #C56622;
+$orange-light: rgba(197, 102, 34, 0.1);
+$gray-bg: #EEEEEE;
+$gray: #F2F2F2;
+$brown: #783C11;
+$green: #23C220;
+$red: #FF3123;
+$warning: #FF7A00;
+
+
+// Sizes
+$base-font-size: 12px;
+
+$breakpoints: (
+  "phone"       : 400px,
+  "phone-wide"  : 480px,
+  "phablet"     : 560px,
+  "tablet-small": 640px,
+  "tablet"      : 768px,
+  "tablet-wide" : 1024px,
+  "desktop"     : 1248px,
+  "desktop-wide": 1440px
+);
+
+$content-size: 1399px;
+
+// Fonts

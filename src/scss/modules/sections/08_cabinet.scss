@@ -1,0 +1,7 @@
+.cabinet {
+	display: flex;
+	justify-content: center;
+	&-s {
+		padding: rem(46px) 0 rem(293px);
+	}
+}

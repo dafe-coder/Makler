@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Create master</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c5bd98ea-afd9-433c-909d-a54b6459fb30&amp;lang=ru_RU" type="text/javascript"></script><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+  </head>
+  <body class="index-page">
+    <div class="wrapper">
+      <header class="header"> 
+        <div class="container"> 
+          <div class="header-body"><a href="/"><img src="img/svg/logo.svg" alt="Makler"></a>
+            <ul class="breadcrumbs">
+              <li> <a href="#"> 
+                  <svg class="svg-sprite-icon icon-fi_arrow-left fill-n w-16">
+                    <use xlink:href="img/symbol/sprite.svg#fi_arrow-left"></use>
+                  </svg></a></li>
+            </ul>
+            <div class="header-nav">
+              <button class="hamburger hamburger--collapse" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+              <ul class="header-nav-list">
+                <li><a href="#">
+                    <svg class="svg-sprite-icon icon-fi_globe w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_globe"></use>
+                    </svg><span>Русский  </span></a></li>
+                <li> <a href="#">
+                    <svg class="svg-sprite-icon icon-fi_heart w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_heart"></use>
+                    </svg></a></li>
+                <li> <a href="#">
+                    <svg class="svg-sprite-icon icon-fi_log-in w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_log-in"></use>
+                    </svg><span>Профиль </span></a></li>
+                <li>
+                  <button class="btn btn-orange-text">
+                    <svg class="svg-sprite-icon icon-fi_plus w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_plus"></use>
+                    </svg><span>разместить объявление</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <section class="create-master-s"> 
+          <div class="container"> 
+            <div class="create-master"> 
+              <div class="create-master__left">
+                <form action="#" method="method">
+                  <h2>Регистрируйтес как мастер, <br>получите работы</h2>
+                  <p class="subtitle">Объявление будет доступно на <a href='makler.uz'>Makler.uz</a> и в наших <br>мобильных приложениях</p>
+                  <div class="upload-avatar"> 
+                    <div class="upload-avatar__left">
+                      <div class="avatar-circle">
+                        <svg class="svg-sprite-icon icon-fi_user fill-n">
+                          <use xlink:href="img/symbol/sprite.svg#fi_user"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="upload-avatar__right">
+                      <p>Загрузите фото профиля или <br>логотп компании</p>
+                      <input type="file" id="avatar">
+                      <label for="avatar" name="user-avatar">Загрузить фото профиля</label>
+                    </div>
+                  </div>
+                  <div class="create-master-inputs"> 
+                    <div class="form-input">
+                      <label>Имя Фамилия </label>
+                      <input placeholder="Abbos Janizakov">
+                    </div>
+                    <div class="form-input">
+                      <label>Электронная почта</label>
+                      <input placeholder="info@gmai.com">
+                    </div>
+                    <div class="form-input">
+                      <label>Номер телефона |  Ваше логин</label>
+                      <input value="+998" placeholder="+998 90 123-45-67">
+                    </div>
+                    <div class="form-input">
+                      <label>Пароль</label>
+                      <input type="password" placeholder="пусто">
+                    </div>
+                  </div>
+                  <div class="create-master-text mb-50">
+                    <label>Краткое описание о себе</label><textarea name="about_me" placeholder='пусто'></textarea> 
+                  </div>
+                  <h4>Выберите раздел и специализацию *</h4>
+                  <div class="select"> 
+                    <label>Введите род деятельности!</label>
+                    <button class="btn"> <span>деятельности</span>
+                      <svg class="svg-sprite-icon icon-fi_chevron-down w-12 fill-n">
+                        <use xlink:href="img/symbol/sprite.svg#fi_chevron-down"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="select"> 
+                    <label>Опыт работы</label>
+                    <button class="btn"> <span>от 3 лет</span>
+                      <svg class="svg-sprite-icon icon-fi_chevron-down w-12 fill-n">
+                        <use xlink:href="img/symbol/sprite.svg#fi_chevron-down"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <h5>Территория обслужование</h5>
+                  <div class="map mb-50">
+                    <div class="map-info">
+                      <h5>Где находится?</h5>
+                      <div class="map-address">
+                        <input placeholder="г.Ташкент, ул.Охангарон 65 А 1">
+                        <button class="btn btn-black">Сохранить</button>
+                      </div>
+                    </div>
+                    <p class="error-par">Такой геолокации не существует</p>
+                    <div id="map"></div>
+                  </div>
+                  <div class="confirm-checkbox">
+                    <input type="checkbox" id="confirm-data">
+                    <label for="confirm-data"> 
+                      <p>Я прочитал и согласен с условиями использования <br> и публикации!</p>
+                      <svg class="svg-sprite-icon icon-check w-12">
+                        <use xlink:href="img/symbol/sprite.svg#check"></use>
+                      </svg>
+                    </label>
+                  </div>
+                  <div class="btns">
+                    <button class="btn btn-black">Сохранить как черновик</button>
+                    <button class="btn btn-orange">Опубликовать объявление </button>
+                  </div>
+                </form>
+              </div>
+              <div class="create-master__right">
+                <div class="info-box">
+                  <h5>Краткое описание о нашем сервисе</h5>
+                  <h3>Регистрация как мастер</h3>
+                  <p class="info-par">Как только вы зарегистрируетесь в качестве мастера, вы сможете получать заказы по направлениям, введенным через наш портал!</p>
+                  <div class="alert-info"> 
+                    <p>Напоминаем, что мы не несем ответственности за сбор платы за услуги через этот портал!</p>
+                  </div>
+                  <p class="info-par">При регистрации вы вводите свой номер телефона в качестве логина и придумываете себе пароль. Нажав кнопку входа, вы введете свой номер телефона и пароль для доступа к существующему профилю.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="footer__top"> 
+          <div class="container">
+            <div class="footer__top-body"><a href="/"> <img src="img/svg/logo-white.svg" alt="Makler"></a>
+              <ul> 
+                <li> <a href="#">Реклама дателям</a></li>
+                <li> <a href="#">Инструкции по публикации</a></li>
+                <li> <a href="#">Инструкции по публикации</a></li>
+              </ul>
+              <ul> 
+                <li> <a href="#">Помощь</a></li>
+                <li> <a href="#">Тех поддержка </a></li>
+                <li> <a href="#">+998 90 123-45-67</a></li>
+                <li> <a href="#">1187</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__center">
+          <div class="container">
+            <div class="footer__center-body"> 
+              <p>'Someday' is a disease that will take your dreams to the grave with you. Just do it and correct course along the way.</p>
+              <ul>
+                <li> <img src="img/svg/payme.svg" alt="payme"></li>
+                <li> <img src="img/svg/click.svg" alt="click"></li>
+                <li> <img src="img/svg/upay.svg" alt="upay"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container"> 
+            <div class="footer__bottom-body"> 
+              <ul> 
+                <li>
+                  <p>Copyright 2022 R</p>
+                </li>
+                <li><a class="line-link" href="#">Условия использование </a></li>
+                <li><a class="line-link" href="#">Политика конфеденциалности</a></li>
+              </ul>
+              <ul class="social-links">
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-fb w-12">
+                      <use xlink:href="img/symbol/sprite.svg#fb"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-inst w-12">
+                      <use xlink:href="img/symbol/sprite.svg#inst"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-telegram w-12">
+                      <use xlink:href="img/symbol/sprite.svg#telegram"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-tw w-12">
+                      <use xlink:href="img/symbol/sprite.svg#tw"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-in w-12">
+                      <use xlink:href="img/symbol/sprite.svg#in"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/app.min.js"></script>
+  </body>
+</html>

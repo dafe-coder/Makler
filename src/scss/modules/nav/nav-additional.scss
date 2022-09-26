@@ -1,0 +1,48 @@
+.additional-nav {
+	&-s {
+		padding: rem(61px) 0 rem(10px);
+		
+	}
+	&-list {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: rem(10px);
+		margin-top: rem(24px);
+		@include laptop {
+			grid-template-columns: repeat(3, 1fr);	
+		}
+		@include tablet {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include phones {
+			grid-template-columns: 1fr;
+		}
+		&>* {
+				&:not(:last-child) {
+					margin-right: 0.7%;
+				}
+			}
+	}
+	ul {
+		flex-basis: 16.1%;
+		background: #FFFFFF;
+		border: 1px solid #E0E0E0;
+		padding: rem(30px) rem(10px) rem(50px) rem(30px);
+		li {
+			a {
+				font-weight: 400;
+				line-height: rem(15px);
+				text-decoration-line: underline;
+				color: $black;
+				transition: all ease .2s;
+				&:hover {
+					color: $orange
+				}
+			}
+		}
+		& > * {&:not(:last-child) {
+			margin-bottom: rem(12px);
+		}}
+	}
+	
+}

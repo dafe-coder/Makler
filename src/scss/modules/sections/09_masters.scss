@@ -1,0 +1,78 @@
+.masters {
+	&-s {
+		padding: 0 0 rem(53px);
+	}
+	&-list {
+		margin-top: rem(40px);
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: rem(10px);
+		margin-bottom: rem(50px);
+		@include laptop {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@include tablet {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include phones {
+			grid-template-columns:  1fr;
+		}
+	}
+	&-item {
+		background: #FFFFFF;
+		border-radius: 3px;
+		padding: rem(20px) rem(20px) rem(40px);
+		&-logo {
+			width: rem(100px);
+			height: rem(100px);
+			margin-bottom: rem(20px);
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&-info {
+			margin-bottom: rem(20px);
+			h5 {
+				font-weight: 700;
+				font-size: rem(15px);
+				line-height: rem(18px);
+				color: #111111;
+				margin-bottom: rem(5px);
+			}
+			p {
+				font-weight: 400;
+				font-size: rem(12px);
+				line-height: rem(15px);
+				color: #111111;
+				opacity: 0.4;
+			}
+		}
+		&-address {
+			font-weight: 400;
+			font-size: rem(10px);
+			line-height: rem(12px);
+			color: #783C11;
+		}
+	}
+
+	.btn-white {
+		padding: rem(14px) rem(64px);
+	}
+}
+
+.open-tags {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: rem(20px);
+	& > * {&:not(:last-child) {
+		margin-right: 2px;
+	}}
+	li {
+		border: 1px solid #000000;
+		border-radius: 50px;
+		padding: rem(4px) rem(12px);
+		margin-bottom: 2px;
+	}
+}

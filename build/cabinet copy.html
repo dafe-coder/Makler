@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Cabinet</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c5bd98ea-afd9-433c-909d-a54b6459fb30&amp;lang=ru_RU" type="text/javascript"></script><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+  </head>
+  <body class="index-page">
+    <div class="wrapper">
+      <header class="header"> 
+        <div class="container"> 
+          <div class="header-body"><a href="/"><img src="img/svg/logo.svg" alt="Makler"></a>
+            <div class="header-nav">
+              <button class="hamburger hamburger--collapse" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+              <ul class="header-nav-list">
+                <li><a href="#">
+                    <svg class="svg-sprite-icon icon-fi_globe w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_globe"></use>
+                    </svg><span>Русский  </span></a></li>
+                <li> <a href="#">
+                    <svg class="svg-sprite-icon icon-fi_heart w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_heart"></use>
+                    </svg></a></li>
+                <li> <a href="#">
+                    <svg class="svg-sprite-icon icon-fi_log-in w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_log-in"></use>
+                    </svg><span>Профиль </span></a></li>
+                <li>
+                  <button class="btn btn-orange-text">
+                    <svg class="svg-sprite-icon icon-fi_plus w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_plus"></use>
+                    </svg><span>разместить объявление</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <section class="cabinet-s">
+          <div class="container">
+            <div class="cabinet" id="cabinet">
+              <section class="advert-s" id="product">
+                <div class="container-sm"> 
+                  <div class="advert"> 
+                    <div class="alert-advert"> 
+                      <h5>Продвигайте свое объявление в ТОП!</h5>
+                      <p>Как только вы зарегистрируетесь в качестве мастера, вы сможете получать заказы по направлениям, введенным через наш портал!</p>
+                      <div class="alert-advert-btns"> 
+                        <button class="btn btn-orange-50">Активировать в топ</button><a href="#">Подробнее  </a>
+                      </div>
+                    </div>
+                    <ul class="advert-list"> 
+                      <li class="advert-item"> 
+                        <div class="advert-item__top"> 
+                          <div class="advert-item-status wait-status"> <span class="advert-item-status-icon">
+                              <svg class="svg-sprite-icon icon-dots-horizontal fill-n">
+                                <use xlink:href="img/symbol/sprite.svg#dots-horizontal"></use>
+                              </svg></span><span>Ожидание подтверждения</span></div>
+                          <button class="btn btn-settings">
+                            <svg class="svg-sprite-icon icon-dots w-16">
+                              <use xlink:href="img/symbol/sprite.svg#dots"></use>
+                            </svg>
+                          </button><img src="img/cards/1.png" alt="Картинка Объявления">
+                        </div>
+                        <div class="advert-item__bottom"> 
+                          <div class="advert-item-info">
+                            <div class="advert-item-info__top">
+                              <p>2 Комнатая кв, 63м²</p><span>400$</span>
+                            </div>
+                            <div class="advert-item-info__bottom"> 
+                              <p>Ташкент, Шайхантахурский район</p><span>22:52</span>
+                            </div>
+                            <ul class="statistic-list"> 
+                              <li> <span>Просмотры: </span><strong>311</strong></li>
+                              <li><span>Комментарии: </span><strong>13</strong></li>
+                              <li><span>Лайки:</span><strong>209</strong></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="advert-item-date"> 
+                          <p>Дата создание: <span>12 Август. 2022  |  </span><span>19:32</span></p>
+                        </div>
+                      </li>
+                      <li class="advert-item"> 
+                        <div class="advert-item__top"> 
+                          <div class="advert-item-status error-status"><span class="advert-item-status-icon">
+                              <svg class="svg-sprite-icon icon-question fill-n">
+                                <use xlink:href="img/symbol/sprite.svg#question"></use>
+                              </svg></span><span>Отказaна!</span></div>
+                          <button class="btn btn-settings">
+                            <svg class="svg-sprite-icon icon-dots w-16">
+                              <use xlink:href="img/symbol/sprite.svg#dots"></use>
+                            </svg>
+                          </button><img src="img/cards/2.png" alt="Картинка Объявления">
+                        </div>
+                        <div class="advert-item__bottom"> 
+                          <div class="advert-item-info">
+                            <div class="advert-item-info__top">
+                              <p>2 Комнатая кв, 63м²</p><span>400$</span>
+                            </div>
+                            <div class="advert-item-info__bottom"> 
+                              <p>Ташкент, Шайхантахурский район</p><span>22:52</span>
+                            </div>
+                            <ul class="statistic-list"> 
+                              <li> <span>Просмотры: </span><strong>311</strong></li>
+                              <li><span>Комментарии: </span><strong>13</strong></li>
+                              <li><span>Лайки:</span><strong>209</strong></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="advert-item-date"> 
+                          <p>Дата создание: <span>12 Август. 2022  |  </span><span>19:32</span></p>
+                        </div>
+                      </li>
+                      <li class="advert-item"> 
+                        <div class="advert-item__top"> 
+                          <div class="advert-item-status success-status"> <span class="advert-item-status-icon">
+                              <svg class="svg-sprite-icon icon-check-green fill-n">
+                                <use xlink:href="img/symbol/sprite.svg#check-green"></use>
+                              </svg></span><span>Подтвержден</span></div>
+                          <button class="btn btn-settings">
+                            <svg class="svg-sprite-icon icon-dots w-16">
+                              <use xlink:href="img/symbol/sprite.svg#dots"></use>
+                            </svg>
+                          </button><img src="img/cards/3.png" alt="Картинка Объявления">
+                        </div>
+                        <div class="advert-item__bottom"> 
+                          <div class="advert-item-info">
+                            <div class="advert-item-info__top">
+                              <p>2 Комнатая кв, 63м²</p><span>400$</span>
+                            </div>
+                            <div class="advert-item-info__bottom"> 
+                              <p>Ташкент, Шайхантахурский район</p><span>22:52</span>
+                            </div>
+                            <ul class="statistic-list"> 
+                              <li> <span>Просмотры: </span><strong>311</strong></li>
+                              <li><span>Комментарии: </span><strong>13</strong></li>
+                              <li><span>Лайки:</span><strong>209</strong></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="advert-item-date"> 
+                          <p>Дата создание: <span>12 Август. 2022  |  </span><span>19:32</span></p>
+                        </div>
+                      </li>
+                      <li class="advert-item"> 
+                        <div class="advert-item__top"> 
+                          <button class="btn btn-settings">
+                            <svg class="svg-sprite-icon icon-dots w-16">
+                              <use xlink:href="img/symbol/sprite.svg#dots"></use>
+                            </svg>
+                          </button><img src="img/cards/4.png" alt="Картинка Объявления">
+                        </div>
+                        <div class="advert-item__bottom"> 
+                          <div class="advert-item-info">
+                            <div class="advert-item-info__top">
+                              <p>2 Комнатая кв, 63м²</p><span>400$</span>
+                            </div>
+                            <div class="advert-item-info__bottom"> 
+                              <p>Ташкент, Шайхантахурский район</p><span>22:52</span>
+                            </div>
+                            <ul class="statistic-list"> 
+                              <li> <span>Просмотры: </span><strong>311</strong></li>
+                              <li><span>Комментарии: </span><strong>13</strong></li>
+                              <li><span>Лайки:</span><strong>209</strong></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="advert-item-date"> 
+                          <p>Дата создание: <span>12 Август. 2022  |  </span><span>19:32</span></p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <section class="advert-s d-none" id="archive">
+                <div class="container-sm"> 
+                  <div class="advert"> 
+                    <ul class="advert-list"> 
+                      <li class="advert-item"> 
+                        <div class="advert-item__top"> 
+                          <button class="btn btn-settings">
+                            <svg class="svg-sprite-icon icon-dots w-16">
+                              <use xlink:href="img/symbol/sprite.svg#dots"></use>
+                            </svg>
+                          </button><img src="img/cards/1.png" alt="Картинка Объявления">
+                        </div>
+                        <div class="advert-item__bottom"> 
+                          <div class="advert-item-info">
+                            <div class="advert-item-info__top">
+                              <p>2 Комнатая кв, 63м²</p><span>400$</span>
+                            </div>
+                            <div class="advert-item-info__bottom"> 
+                              <p>Ташкент, Шайхантахурский район</p><span>22:52</span>
+                            </div>
+                            <ul class="statistic-list"> 
+                              <li> <span>Просмотры: </span><strong>311</strong></li>
+                              <li><span>Комментарии: </span><strong>13</strong></li>
+                              <li><span>Лайки:</span><strong>209</strong></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="advert-item-date"> 
+                          <p>Дата создание: <span>12 Август. 2022  |  </span><span>19:32</span></p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <section class="advert-s d-none" id="draft">
+                <div class="container-sm"> 
+                  <div class="advert"> 
+                    <div class="alert-advert"> 
+                      <h5>Продвигайте свое объявление в ТОП!</h5>
+                      <p>Как только вы зарегистрируетесь в качестве мастера, вы сможете получать заказы по направлениям, введенным через наш портал!</p>
+                      <div class="alert-advert-btns"> 
+                        <button class="btn btn-orange-50">Активировать в топ</button><a href="#">Подробнее  </a>
+                      </div>
+                    </div>
+                    <ul class="advert-list"> 
+                      <li class="advert-item"> 
+                        <div class="advert-item__top"> 
+                          <button class="btn btn-settings">
+                            <svg class="svg-sprite-icon icon-dots w-16">
+                              <use xlink:href="img/symbol/sprite.svg#dots"></use>
+                            </svg>
+                          </button><img src="img/cards/1.png" alt="Картинка Объявления">
+                        </div>
+                        <div class="advert-item__bottom"> 
+                          <div class="advert-item-info">
+                            <div class="advert-item-info__top">
+                              <p>2 Комнатая кв, 63м²</p><span>400$</span>
+                            </div>
+                            <div class="advert-item-info__bottom"> 
+                              <p>Ташкент, Шайхантахурский район</p><span>22:52</span>
+                            </div>
+                            <ul class="statistic-list"> 
+                              <li> <span>Просмотры: </span><strong>311</strong></li>
+                              <li><span>Комментарии: </span><strong>13</strong></li>
+                              <li><span>Лайки:</span><strong>209</strong></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="advert-item-date"> 
+                          <p>Дата создание: <span>12 Август. 2022  |  </span><span>19:32</span></p>
+                        </div>
+                      </li>
+                      <li class="advert-item"> 
+                        <div class="advert-item__top"> 
+                          <button class="btn btn-settings">
+                            <svg class="svg-sprite-icon icon-dots w-16">
+                              <use xlink:href="img/symbol/sprite.svg#dots"></use>
+                            </svg>
+                          </button><img src="img/cards/2.png" alt="Картинка Объявления">
+                        </div>
+                        <div class="advert-item__bottom"> 
+                          <div class="advert-item-info">
+                            <div class="advert-item-info__top">
+                              <p>2 Комнатая кв, 63м²</p><span>400$</span>
+                            </div>
+                            <div class="advert-item-info__bottom"> 
+                              <p>Ташкент, Шайхантахурский район</p><span>22:52</span>
+                            </div>
+                            <ul class="statistic-list"> 
+                              <li> <span>Просмотры: </span><strong>311</strong></li>
+                              <li><span>Комментарии: </span><strong>13</strong></li>
+                              <li><span>Лайки:</span><strong>209</strong></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="advert-item-date"> 
+                          <p>Дата создание: <span>12 Август. 2022  |  </span><span>19:32</span></p>
+                        </div>
+                      </li>
+                      <li class="advert-item"> 
+                        <div class="advert-item__top"> 
+                          <button class="btn btn-settings">
+                            <svg class="svg-sprite-icon icon-dots w-16">
+                              <use xlink:href="img/symbol/sprite.svg#dots"></use>
+                            </svg>
+                          </button><img src="img/cards/3.png" alt="Картинка Объявления">
+                        </div>
+                        <div class="advert-item__bottom"> 
+                          <div class="advert-item-info">
+                            <div class="advert-item-info__top">
+                              <p>2 Комнатая кв, 63м²</p><span>400$</span>
+                            </div>
+                            <div class="advert-item-info__bottom"> 
+                              <p>Ташкент, Шайхантахурский район</p><span>22:52</span>
+                            </div>
+                            <ul class="statistic-list"> 
+                              <li> <span>Просмотры: </span><strong>311</strong></li>
+                              <li><span>Комментарии: </span><strong>13</strong></li>
+                              <li><span>Лайки:</span><strong>209</strong></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="advert-item-date"> 
+                          <p>Дата создание: <span>12 Август. 2022  |  </span><span>19:32</span></p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <section class="settings-s d-none" id="settings">
+                <div class="container-sm"> 
+                  <div class="settings"> 
+                    <div class="settings-profile"> 
+                      <div class="settings-profile-logo"> <img src="img/avatar-big.png" alt="Аватар"></div>
+                      <div class="settings-profile-info">
+                        <h3>Abbos Janizakov</h3>
+                        <button class="btn btn-border-orange">Изменить фото профиля </button>
+                      </div>
+                    </div>
+                    <form class="settings-form">
+                      <div class="form-input">	
+                        <label>Имя Фамилия</label>
+                        <input type="text" value="Abbos Janizakov">
+                      </div>
+                      <div class="form-input">	
+                        <label>Электронная почта</label>
+                        <input type="text" value="abbosjanizakov@mail.ru">
+                      </div>
+                      <div class="form-input">	
+                        <label>Номер телефона |  Ваше логин</label>
+                        <input type="text" value="+998 90 123-45-67">
+                      </div>
+                      <div class="form-input">	
+                        <label>Пароль</label>
+                        <input type="password" placeholder="пусто">
+                      </div>
+                      <div class="change-password"> 
+                        <h3>Изменить пароль</h3>
+                        <p class="change-password-subtitle">После создания постоянного пароля для своего профиля вам необходимо будет подтвердить его с помощью прикрепленного смс-кода!</p>
+                        <label>Пароль</label>
+                        <input type="password" placeholder="пусто">
+                        <p class="change-password-par">Создайте постоянный пароль для входа в аккаунт!</p>
+                      </div>
+                      <button class="btn btn-orange">Сохранить изменения</button>
+                    </form>
+                  </div>
+                </div>
+              </section>
+              <section class="chat-s d-none" id="chat"> 
+                <div class="container">
+                  <div class="chat"> 
+                    <div class="chat__left"> 
+                      <ul class="chat-list">
+                        <li class="chat-item"> <a href="#"> 
+                            <div class="chat-item-logo"> 
+                              <div class="logo">	<span>HF</span></div>
+                            </div>
+                            <div class="chat-item-info">
+                              <h5>Habibullo Farxodov</h5>
+                              <p>Был в сети: <span>18:32</span></p>
+                            </div></a></li>
+                        <li class="chat-item active"><a href="#"> 
+                            <div class="chat-item-logo"> 
+                              <div class="logo">	<img src="img/logo.png" alt="logo"></div>
+                            </div>
+                            <div class="chat-item-info">
+                              <h5>Makler.uz</h5>
+                              <p>Был в сети: <span>18:32</span></p>
+                            </div></a></li>
+                        <li class="chat-item"> <a href="#"> 
+                            <div class="chat-item-logo"> 
+                              <div class="logo">	<span>HF</span></div>
+                            </div>
+                            <div class="chat-item-info">
+                              <h5>Muhammad</h5>
+                              <p>Был в сети: <span>18:32</span></p>
+                            </div></a></li>
+                        <li class="chat-item"> <a href="#"> 
+                            <div class="chat-item-logo"> 
+                              <div class="logo">	<span>HF</span></div>
+                            </div>
+                            <div class="chat-item-info">
+                              <h5>id:23904</h5>
+                              <p>Был в сети: <span>18:32</span></p>
+                            </div></a></li>
+                        <li class="chat-item"> <a href="#"> 
+                            <div class="chat-item-logo"> 
+                              <div class="logo">	<span>HF</span></div>
+                            </div>
+                            <div class="chat-item-info">
+                              <h5>Rixsitillo Hamidov</h5>
+                              <p>Был в сети: <span>18:32</span></p>
+                            </div></a></li>
+                      </ul>
+                    </div>
+                    <div class="chat__right">
+                      <div class="chat-body"> 
+                        <div class="chat-header"> 
+                          <p>Чат</p>
+                          <button class="btn"> 
+                            <svg class="svg-sprite-icon icon-dots">
+                              <use xlink:href="img/symbol/sprite.svg#dots"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <ul class="chat-messages"> 
+                          <li>
+                            <p>Привет! Уважаемый пользователь, мы хотели бы сообщить вам, что, поскольку вы используете наш сайт, вам предоставляется скидка на рекламу! Ура Ура Ура Ура!</p><span class="chat-messages-time">09:02</span>
+                          </li>
+                          <li>
+                            <p>Привет! Уважаемый пользователь, мы хотели бы сообщить вам, что, поскольку вы используете наш сайт, вам предоставляется скидка на рекламу! Ура Ура Ура Ура!</p><span class="chat-messages-time">09:02</span>
+                          </li>
+                          <li class="your-sms"><span class="your-span">Вы</span>
+                            <p>Привет! Уважаемый пользователь, мы хотели бы сообщить вам, что, поскольку вы используете наш сайт, вам предоставляется скидка на рекламу! Ура Ура Ура Ура!</p><span class="chat-messages-time">09:02</span>
+                          </li>
+                        </ul>
+                        <div class="chat-footer">
+                          <form action="#"> 
+                            <input type="text" placeholder="Пишите ваш текст" required>
+                            <button class="btn" type="submit">
+                              <svg class="svg-sprite-icon icon-send fill-n">
+                                <use xlink:href="img/symbol/sprite.svg#send"></use>
+                              </svg>
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <div class="cabinet-nav">
+                <div class="cabinet-profile"> 
+                  <div class="cabinet-profile-logo"> <img src="img/avatar-big.png" alt="Логотип"></div>
+                  <div class="cabinet-profile-info">
+                    <h4>Abbos Janizakov</h4>
+                    <p>id:123981</p>
+                  </div>
+                </div>
+                <ul class="cabinet-nav-list">
+                  <li class="active">
+                    <button class="btn btn-orange-light left-icon" id="product-link">
+                      <svg class="svg-sprite-icon icon-fi_book-o fill-n w-16">
+                        <use xlink:href="img/symbol/sprite.svg#fi_book-o"></use>
+                      </svg>
+                      <svg class="svg-sprite-icon icon-fi_book fill-n w-16">
+                        <use xlink:href="img/symbol/sprite.svg#fi_book"></use>
+                      </svg><span>Мои объявления</span>
+                    </button>
+                  </li>
+                  <li> 
+                    <button class="btn btn-orange-light left-icon" id="notifications-link">
+                      <svg class="svg-sprite-icon icon-fi_mail-o fill-n w-16">
+                        <use xlink:href="img/symbol/sprite.svg#fi_mail-o"></use>
+                      </svg>
+                      <svg class="svg-sprite-icon icon-fi_mail fill-n w-16">
+                        <use xlink:href="img/symbol/sprite.svg#fi_mail"></use>
+                      </svg><span>Уведомлении</span>
+                    </button>
+                  </li>
+                  <li> 
+                    <button class="btn btn-orange-light left-icon" id="draft-link">
+                      <svg class="svg-sprite-icon icon-fi_book-o fill-n w-16">
+                        <use xlink:href="img/symbol/sprite.svg#fi_book-o"></use>
+                      </svg>
+                      <svg class="svg-sprite-icon icon-fi_book fill-n w-16">
+                        <use xlink:href="img/symbol/sprite.svg#fi_book"></use>
+                      </svg><span>Черновик</span>
+                    </button>
+                  </li>
+                  <li> 
+                    <button class="btn btn-orange-light left-icon" id="archive-link">
+                      <svg class="svg-sprite-icon icon-fi_archive-o fill-n w-16">
+                        <use xlink:href="img/symbol/sprite.svg#fi_archive-o"></use>
+                      </svg>
+                      <svg class="svg-sprite-icon icon-fi_archive fill-n w-16">
+                        <use xlink:href="img/symbol/sprite.svg#fi_archive"></use>
+                      </svg><span>Архив</span>
+                    </button>
+                  </li>
+                  <li> 
+                    <button class="btn btn-orange-light left-icon" id="settings-link">
+                      <svg class="svg-sprite-icon icon-fi_settings-o fill-n w-16">
+                        <use xlink:href="img/symbol/sprite.svg#fi_settings-o"></use>
+                      </svg>
+                      <svg class="svg-sprite-icon icon-fi_settings fill-n w-16">
+                        <use xlink:href="img/symbol/sprite.svg#fi_settings"></use>
+                      </svg><span>Настроить профиль</span>
+                    </button>
+                  </li>
+                </ul><a class="logout-link left-icon" href="#" id="log-out">
+                  <svg class="svg-sprite-icon icon-fi_log-out-o fill-n w-16">
+                    <use xlink:href="img/symbol/sprite.svg#fi_log-out-o"></use>
+                  </svg>
+                  <svg class="svg-sprite-icon icon-fi_log-out fill-n w-16">
+                    <use xlink:href="img/symbol/sprite.svg#fi_log-out"></use>
+                  </svg><span>Выйти из профиля</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="footer__top"> 
+          <div class="container">
+            <div class="footer__top-body"><a href="/"> <img src="img/svg/logo-white.svg" alt="Makler"></a>
+              <ul> 
+                <li> <a href="#">Реклама дателям</a></li>
+                <li> <a href="#">Инструкции по публикации</a></li>
+                <li> <a href="#">Инструкции по публикации</a></li>
+              </ul>
+              <ul> 
+                <li> <a href="#">Помощь</a></li>
+                <li> <a href="#">Тех поддержка </a></li>
+                <li> <a href="#">+998 90 123-45-67</a></li>
+                <li> <a href="#">1187</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__center">
+          <div class="container">
+            <div class="footer__center-body"> 
+              <p>'Someday' is a disease that will take your dreams to the grave with you. Just do it and correct course along the way.</p>
+              <ul>
+                <li> <img src="img/svg/payme.svg" alt="payme"></li>
+                <li> <img src="img/svg/click.svg" alt="click"></li>
+                <li> <img src="img/svg/upay.svg" alt="upay"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container"> 
+            <div class="footer__bottom-body"> 
+              <ul> 
+                <li>
+                  <p>Copyright 2022 R</p>
+                </li>
+                <li><a class="line-link" href="#">Условия использование </a></li>
+                <li><a class="line-link" href="#">Политика конфеденциалности</a></li>
+              </ul>
+              <ul class="social-links">
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-fb w-12">
+                      <use xlink:href="img/symbol/sprite.svg#fb"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-inst w-12">
+                      <use xlink:href="img/symbol/sprite.svg#inst"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-telegram w-12">
+                      <use xlink:href="img/symbol/sprite.svg#telegram"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-tw w-12">
+                      <use xlink:href="img/symbol/sprite.svg#tw"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-in w-12">
+                      <use xlink:href="img/symbol/sprite.svg#in"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/app.min.js"></script>
+  </body>
+</html>

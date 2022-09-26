@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Create product</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c5bd98ea-afd9-433c-909d-a54b6459fb30&amp;lang=ru_RU" type="text/javascript"></script><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+  </head>
+  <body class="index-page">
+    <div class="wrapper">
+      <header class="header"> 
+        <div class="container"> 
+          <div class="header-body"><a href="/"><img src="img/svg/logo.svg" alt="Makler"></a>
+            <ul class="breadcrumbs">
+              <li> <a href="#"> 
+                  <svg class="svg-sprite-icon icon-fi_arrow-left fill-n w-16">
+                    <use xlink:href="img/symbol/sprite.svg#fi_arrow-left"></use>
+                  </svg></a></li>
+            </ul>
+            <div class="header-nav">
+              <button class="hamburger hamburger--collapse" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+              <ul class="header-nav-list">
+                <li><a href="#">
+                    <svg class="svg-sprite-icon icon-fi_globe w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_globe"></use>
+                    </svg><span>Русский  </span></a></li>
+                <li> <a href="#">
+                    <svg class="svg-sprite-icon icon-fi_heart w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_heart"></use>
+                    </svg></a></li>
+                <li> <a href="#">
+                    <svg class="svg-sprite-icon icon-fi_log-in w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_log-in"></use>
+                    </svg><span>Профиль </span></a></li>
+                <li>
+                  <button class="btn btn-orange-text">
+                    <svg class="svg-sprite-icon icon-fi_plus w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_plus"></use>
+                    </svg><span>разместить объявление</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <section class="create-product-s"> 
+          <div class="container"> 
+            <div class="create-product"> 
+              <div class="create-product__left">
+                <h2>Добавить новое <br>объявление</h2>
+                <p class="subtitle">Объявление будет доступно на <a href='makler.uz'>Makler.uz</a> и в наших <br>мобильных приложениях</p>
+                <h5>Выберите тип объявления</h5>
+                <div class="create-product-btns mb-30">
+                  <button class="btn btn-orange">Сдать в аренду</button>
+                  <button class="btn btn-white">Продажа недвижимости</button>
+                </div>
+                <h5>Тип аренды</h5>
+                <ul class="switch-list mb-40">
+                  <li class="switch-btn"> 
+                    <input type="radio" id="long" name="time" checked required>
+                    <label for="long">Длительно</label>
+                  </li>
+                  <li class="switch-btn"> 
+                    <input type="radio" id="month" name="time" required>
+                    <label for="month">На несколько месяцев</label>
+                  </li>
+                  <li class="switch-btn"> 
+                    <input type="radio" id="day" name="time" required>
+                    <label for="day">Посуточно</label>
+                  </li>
+                </ul>
+                <h5>Тип недвижимости</h5>
+                <ul class="radio-list mb-60">
+                  <li class="radio-btn"> 
+                    <input type="radio" id="living" name="type" checked required>
+                    <label for="living">Жилая	</label>
+                  </li>
+                  <li class="radio-btn"> 
+                    <input type="radio" id="commercial" name="type" required>
+                    <label for="commercial">Коммерческая	</label>
+                  </li>
+                </ul>
+                <h5>Объект</h5>
+                <ul class="radio-list mb-50">
+                  <li class="radio-btn"> 
+                    <input type="radio" id="flat" name="object" required>
+                    <label for="flat">Квартира</label>
+                  </li>
+                  <li class="radio-btn"> 
+                    <input type="radio" id="room" name="object" required>
+                    <label for="room">Комната</label>
+                  </li>
+                  <li class="radio-btn"> 
+                    <input type="radio" id="dacha" name="object" required>
+                    <label for="dacha">Дача</label>
+                  </li>
+                  <li class="radio-btn"> 
+                    <input type="radio" id="house" name="object" required>
+                    <label for="house">Дом</label>
+                  </li>
+                  <li class="radio-btn"> 
+                    <input type="radio" id="part" name="object" required>
+                    <label for="part">Часть дома</label>
+                  </li>
+                  <li class="radio-btn"> 
+                    <input type="radio" id="townhouse" name="object" required>
+                    <label for="townhouse">Таунхаус</label>
+                  </li>
+                  <li class="radio-btn"> 
+                    <input type="radio" id="some" name="object" required>
+                    <label for="some">Койко-место</label>
+                  </li>
+                </ul>
+                <h5>Расположение</h5>
+                <div class="map mb-50">
+                  <div class="map-info">
+                    <h5>Где находится?</h5>
+                    <div class="map-address">
+                      <input placeholder="г.Ташкент, ул.Охангарон 65 А 1">
+                      <button class="btn btn-black">Сохранить</button>
+                    </div>
+                  </div>
+                  <p class="error-par">Такой геолокации не существует</p>
+                  <div id="map"></div>
+                </div>
+                <h5>Изображения объекта</h5>
+                <div class="image-upload mb-50">
+                  <div class="image-outer"> 
+                    <div class="image-outer-info">
+                      <h5>Перетащите сюда свои изображения или нажмите сюда</h5>
+                      <p>Поддерживает: .jpg, .png, .jpeg</p>
+                    </div>
+                    <input type="file" id="images" accept="image/png, image/jpeg, image/jpg" multiple>
+                    <label for="images">открыть</label>
+                  </div>
+                  <div class="image-progress"> 
+                    <div class="files-name">Uploading...<span>img128371.jpg</span></div>
+                    <div class="progress">
+                      <progress id="progress-bar" max="100" value="0"></progress>
+                      <div class="progress-bg">
+                        <div class="progress-bar"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="image-list" id="gallery"></ul>
+                </div>
+                <h5>Вся информация об объекте</h5>
+                <div class="sizes mb-50">
+                  <p>Площадь, м² *</p>
+                  <div class="sizes-inputs">
+                    <input placeholder="Общая" type="number">
+                    <input placeholder="Жилая" type="number">
+                    <input placeholder="Кухня" type="number">
+                  </div>
+                  <div class="sizes-input"> 
+                    <label>Количество комнат *</label>
+                    <input placeholder="Общая" type="number">
+                  </div>
+                  <div class="sizes-input"> 
+                    <label>Этаж*</label>
+                    <input placeholder="Общая" type="number">
+                  </div>
+                  <div class="sizes-input"> 
+                    <label>Этаж из*</label>
+                    <input placeholder="Общая" type="number">
+                  </div>
+                </div>
+                <h5>Тип строения</h5>
+                <ul class="radio-list mb-50">
+                  <li class="radio-btn"> 
+                    <input type="radio" id="type-brick" name="type-building">
+                    <label for="type-brick">Кирпич</label>
+                  </li>
+                  <li class="radio-btn"> 
+                    <input type="radio" id="type-monolith" name="type-building">
+                    <label for="type-monolith">Монолит</label>
+                  </li>
+                  <li class="radio-btn"> 
+                    <input type="radio" id="type-panel" name="type-building">
+                    <label for="type-panel">Панель</label>
+                  </li>
+                  <li class="radio-btn"> 
+                    <input type="radio" id="type-block" name="type-building">
+                    <label for="type-block">Блочный</label>
+                  </li>
+                </ul>
+                <ul class="ipoteka-list mb-40">
+                  <li class="radio-list">
+                    <h5>Ипотека</h5>
+                    <div class="radios">
+                      <div class="radio-btn"> 
+                        <input type="radio" id="ipoteka-yes" name="ipoteka">
+                        <label for="ipoteka-yes">да</label>
+                      </div>
+                      <div class="radio-btn"> 
+                        <input type="radio" id="ipoteka-no" name="ipoteka">
+                        <label for="ipoteka-no">нет </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="radio-list">
+                    <h5>Новостройка</h5>
+                    <div class="radios">
+                      <div class="radio-btn"> 
+                        <input type="radio" id="new-buildings-yes" name="new-buildings">
+                        <label for="new-buildings-yes">да</label>
+                      </div>
+                      <div class="radio-btn"> 
+                        <input type="radio" id="new-buildings-no" name="new-buildings">
+                        <label for="new-buildings-no">нет </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="radio-list">
+                    <h5>Меблирована</h5>
+                    <div class="radios">
+                      <div class="radio-btn"> 
+                        <input type="radio" id="furnishings-yes" name="furnishings">
+                        <label for="furnishings-yes">да</label>
+                      </div>
+                      <div class="radio-btn"> 
+                        <input type="radio" id="furnishings-no" name="furnishings">
+                        <label for="furnishings-no">нет </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <h5>Все удобства</h5>
+                <ul class="checkbox-list mb-40">
+                  <li class="checkbox-btn">
+                    <input type="checkbox" id="comfort-long">
+                    <label for="comfort-long"> 
+                      <svg class="svg-sprite-icon icon-tags-1 w-16">
+                        <use xlink:href="img/symbol/sprite.svg#tags-1"></use>
+                      </svg><span>Долгосрочная аренда</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-btn">
+                    <input type="checkbox" id="comfort-family">
+                    <label for="comfort-family"> 
+                      <svg class="svg-sprite-icon icon-tags-2 w-16">
+                        <use xlink:href="img/symbol/sprite.svg#tags-2"></use>
+                      </svg><span>Family</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-btn">
+                    <input type="checkbox" id="comfort-room">
+                    <label for="comfort-room"> 
+                      <svg class="svg-sprite-icon icon-tags-3 w-16">
+                        <use xlink:href="img/symbol/sprite.svg#tags-3"></use>
+                      </svg><span>3 room</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-btn">
+                    <input type="checkbox" id="comfort-notarius">
+                    <label for="comfort-notarius"> 
+                      <svg class="svg-sprite-icon icon-tags-4 w-16">
+                        <use xlink:href="img/symbol/sprite.svg#tags-4"></use>
+                      </svg><span>Нотариус</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-btn">
+                    <input type="checkbox" id="comfort-tv">
+                    <label for="comfort-tv"> 
+                      <svg class="svg-sprite-icon icon-tags-5 w-16">
+                        <use xlink:href="img/symbol/sprite.svg#tags-5"></use>
+                      </svg><span>TV</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-btn">
+                    <input type="checkbox" id="comfort-cart">
+                    <label for="comfort-cart"> 
+                      <svg class="svg-sprite-icon icon-tags-6 w-16">
+                        <use xlink:href="img/symbol/sprite.svg#tags-6"></use>
+                      </svg><span>Рядом Корзинка</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-btn">
+                    <input type="checkbox" id="comfort-wifi">
+                    <label for="comfort-wifi"> 
+                      <svg class="svg-sprite-icon icon-tags-7 w-16">
+                        <use xlink:href="img/symbol/sprite.svg#tags-7"></use>
+                      </svg><span>Wi-Fi</span>
+                    </label>
+                  </li>
+                </ul>
+                <div class="confirm-checkbox">
+                  <input type="checkbox" id="confirm-data">
+                  <label for="confirm-data"> 
+                    <p>Я прочитал и согласен с условиями использования <br>и публикации!</p>
+                    <svg class="svg-sprite-icon icon-check w-12">
+                      <use xlink:href="img/symbol/sprite.svg#check"></use>
+                    </svg>
+                  </label>
+                </div>
+                <div class="btns">
+                  <button class="btn btn-black">Сохранить как черновик</button>
+                  <button class="btn btn-orange">Опубликовать объявление </button>
+                </div>
+              </div>
+              <div class="create-product__right">
+                <h5>Контактная информация</h5>
+                <div class="form">
+                  <h3>Вы зарегистрированы?</h3>
+                  <p>Если вы уже зарегистрированы, нажмите на кнопку  <a href="#">Войти</a>. </p>
+                  <form action="#">
+                    <div class="form-input"> 
+                      <label>Имя Фамилия*</label>
+                      <input type="text" placeholder="ФИО">
+                    </div>
+                    <div class="form-input"> 
+                      <label>Номер телефона*</label>
+                      <input type="text" value="+998">
+                    </div>
+                    <div class="form-input"> 
+                      <label>Дополнительный номер телефона!*</label>
+                      <input type="text" value="+998">
+                    </div>
+                    <p>Telegram</p>
+                    <button class="btn btn-telegram">
+                      <svg class="svg-sprite-icon icon-telegram w-14">
+                        <use xlink:href="img/symbol/sprite.svg#telegram"></use>
+                      </svg><span>t.me://channel_username</span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="footer__top"> 
+          <div class="container">
+            <div class="footer__top-body"><a href="/"> <img src="img/svg/logo-white.svg" alt="Makler"></a>
+              <ul> 
+                <li> <a href="#">Реклама дателям</a></li>
+                <li> <a href="#">Инструкции по публикации</a></li>
+                <li> <a href="#">Инструкции по публикации</a></li>
+              </ul>
+              <ul> 
+                <li> <a href="#">Помощь</a></li>
+                <li> <a href="#">Тех поддержка </a></li>
+                <li> <a href="#">+998 90 123-45-67</a></li>
+                <li> <a href="#">1187</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__center">
+          <div class="container">
+            <div class="footer__center-body"> 
+              <p>'Someday' is a disease that will take your dreams to the grave with you. Just do it and correct course along the way.</p>
+              <ul>
+                <li> <img src="img/svg/payme.svg" alt="payme"></li>
+                <li> <img src="img/svg/click.svg" alt="click"></li>
+                <li> <img src="img/svg/upay.svg" alt="upay"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container"> 
+            <div class="footer__bottom-body"> 
+              <ul> 
+                <li>
+                  <p>Copyright 2022 R</p>
+                </li>
+                <li><a class="line-link" href="#">Условия использование </a></li>
+                <li><a class="line-link" href="#">Политика конфеденциалности</a></li>
+              </ul>
+              <ul class="social-links">
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-fb w-12">
+                      <use xlink:href="img/symbol/sprite.svg#fb"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-inst w-12">
+                      <use xlink:href="img/symbol/sprite.svg#inst"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-telegram w-12">
+                      <use xlink:href="img/symbol/sprite.svg#telegram"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-tw w-12">
+                      <use xlink:href="img/symbol/sprite.svg#tw"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-in w-12">
+                      <use xlink:href="img/symbol/sprite.svg#in"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/app.min.js"></script>
+  </body>
+</html>

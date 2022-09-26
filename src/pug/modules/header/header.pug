@@ -1,0 +1,26 @@
+header.header 
+	.container 
+		.header-body
+			a(href="/")
+				img(src="@img/svg/logo.svg", alt="Makler")  
+			include ../nav/breadcrumbs
+			.header-nav
+				button.hamburger.hamburger--collapse(type='button')
+					span.hamburger-box
+						span.hamburger-inner
+				ul.header-nav-list
+					li
+						a(href="#")
+							+icon('fi_globe', 'w-16')
+							span Русский  
+					li 
+						a(href="#")
+							+icon('fi_heart', 'w-16') 
+					li 
+						a(href="#")
+							+icon('fi_log-in', 'w-16')
+							span Профиль 
+					li
+						button.btn.btn-orange-text
+							+icon('fi_plus', 'w-16')
+							span разместить объявление

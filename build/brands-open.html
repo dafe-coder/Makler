@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Braands opened</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c5bd98ea-afd9-433c-909d-a54b6459fb30&amp;lang=ru_RU" type="text/javascript"></script><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+  </head>
+  <body class="brands-open-page">
+    <div class="wrapper">
+      <header class="header"> 
+        <div class="container"> 
+          <div class="header-body"><a href="/"><img src="img/svg/logo.svg" alt="Makler"></a>
+            <ul class="breadcrumbs">
+              <li> <a href="#"> 
+                  <svg class="svg-sprite-icon icon-fi_arrow-left fill-n w-16">
+                    <use xlink:href="img/symbol/sprite.svg#fi_arrow-left"></use>
+                  </svg></a></li>
+            </ul>
+            <div class="header-nav">
+              <button class="hamburger hamburger--collapse" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+              <ul class="header-nav-list">
+                <li><a href="#">
+                    <svg class="svg-sprite-icon icon-fi_globe w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_globe"></use>
+                    </svg><span>Русский  </span></a></li>
+                <li> <a href="#">
+                    <svg class="svg-sprite-icon icon-fi_heart w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_heart"></use>
+                    </svg></a></li>
+                <li> <a href="#">
+                    <svg class="svg-sprite-icon icon-fi_log-in w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_log-in"></use>
+                    </svg><span>Профиль </span></a></li>
+                <li>
+                  <button class="btn btn-orange-text">
+                    <svg class="svg-sprite-icon icon-fi_plus w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_plus"></use>
+                    </svg><span>разместить объявление</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <section class="open-info-s">
+          <div class="nav-search"> 
+            <div class="container">	
+              <ul class="nav-search-body"> 
+                <li class="nav-search_how">
+                  <label>Как</label><a class="choose-btn choose-btn-round" href="#" id="choose-how"><span>Об устройство</span>
+                    <svg class="svg-sprite-icon icon-fi_chevron-down w-12">
+                      <use xlink:href="img/symbol/sprite.svg#fi_chevron-down"></use>
+                    </svg></a>
+                  <div class="nav-body-choose">
+                    <ul>
+                      <li> <a class="btn btn-orange-light active" href="#">Купить 	</a></li>
+                      <li> <a class="btn btn-orange-light" href="#">Продать 	</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-search_type">
+                  <label>Тип</label><a class="choose-btn choose-btn-link" href="#" id="choose-type"><span>Бытовая техника для дома </span>
+                    <svg class="svg-sprite-icon icon-fi_chevron-down w-12">
+                      <use xlink:href="img/symbol/sprite.svg#fi_chevron-down"></use>
+                    </svg></a>
+                  <div class="nav-body-choose">
+                    <ul>
+                      <li> <a class="btn btn-orange-light active" href="#">Квартиру 	</a></li>
+                      <li> <a class="btn btn-orange-light" href="#">Дома 	</a></li>
+                      <li> <a class="btn btn-orange-light" href="#">Участка </a></li>
+                    </ul>
+                    <ul>
+                      <li> <a class="btn btn-orange-light" href="#">Комната 	</a></li>
+                      <li> <a class="btn btn-orange-light" href="#">Дача 	</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-search_address">
+                  <label>Адрес</label><a href="#"> 
+                    <svg class="svg-sprite-icon icon-fi_navigation w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_navigation"></use>
+                    </svg><span>г.Ташкент, Чилонзор</span></a>
+                </li>
+                <li class="nav-search_rooms">
+                  <label>Кол-во комнат</label>
+                  <ul class="rooms-list" id="choose-room">
+                    <li> <a href="#">1 </a></li>
+                    <li> <a href="#">2</a></li>
+                    <li><a href="#">3 </a></li>
+                    <li> <a href="#">4 </a></li>
+                    <li> <a href="#">5+ </a></li>
+                  </ul>
+                </li>
+                <li> 
+                  <button class="btn show-btn-orange">Показать</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="container"> 
+            <div class="open-info"> 
+              <div class="open-info__left"> 
+                <div class="open-info-profile"> 
+                  <div class="logo"> <img src="img/brands/brand-logo-open.png" alt="logo"></div>
+                  <h5>iTechhouse</h5>
+                  <p class="open-position">Магазин битовая техники</p>
+                  <ul class="open-tags">
+                    <li>мебель</li>
+                    <li>для кухни</li>
+                    <li>ремонт</li>
+                    <li>бытовая техника</li>
+                    <li>Телевизоры</li>
+                  </ul>
+                  <p class="open-address">Ташкент, Шайхантахурский район</p>
+                </div>
+                <div class="open-info-contacts"> <a class="tel-nums" href="tel:+998 90 123-45-67">+998 90 123-45-67</a><a href="mailto:info@gmail.com">info@gmail.com</a>
+                  <button class="btn btn-orange">Написать </button>
+                </div>
+              </div>
+              <div class="open-info__right"> 
+                <h4>Описание</h4>
+                <p>A warehouse for storing goods is available for rent. There is a free area (land plot of 2 hectares) for the buildings of production workshops, mini-factories, etc. Our warehouse is located in the city of Tashkent, Sergeli industrial zone, opposite the Sergeli Logistic customs post. Convenient location, on a central road, there are all communications, a warehouse of more than 3000 square meters.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="recommended-brands-s">
+          <div class="container"> 
+            <ul class="brands-list"> 
+              <li class="brands-item"> 
+                <div class="brands-item-header"> 
+                  <div class="brands-item-logo"> <img src="img/brands/logo1.png" alt="logo brands"></div>
+                  <h5 class="brands-item-title">iTechhouse</h5>
+                </div>
+                <div class="brands-item-body"> 
+                  <div class="brands-item-image"> <img src="img/brands/1.png" alt="Картинка брэнда"></div>
+                  <div class="brands-item-info"> 
+                    <h5>Стиралная машина</h5>
+                    <p>Техника для дома</p><span>$670</span>
+                  </div>
+                </div>
+              </li>
+              <li class="brands-item"> 
+                <div class="brands-item-header"> 
+                  <div class="brands-item-logo"> <img src="img/brands/logo2.png" alt="logo brands"></div>
+                  <h5 class="brands-item-title">iTechhouse</h5>
+                </div>
+                <div class="brands-item-body"> 
+                  <div class="brands-item-image"> <img src="img/brands/2.png" alt="Картинка брэнда"></div>
+                  <div class="brands-item-info"> 
+                    <h5>Стиралная машина</h5>
+                    <p>Техника для дома</p><span>$670</span>
+                  </div>
+                </div>
+              </li>
+              <li class="brands-item"> 
+                <div class="brands-item-header"> 
+                  <div class="brands-item-logo"> <img src="img/brands/logo3.png" alt="logo brands"></div>
+                  <h5 class="brands-item-title">iTechhouse</h5>
+                </div>
+                <div class="brands-item-body"> 
+                  <div class="brands-item-image"> <img src="img/brands/3.png" alt="Картинка брэнда"></div>
+                  <div class="brands-item-info"> 
+                    <h5>Стиралная машина</h5>
+                    <p>Техника для дома</p><span>$670</span>
+                  </div>
+                </div>
+              </li>
+              <li class="brands-item"> 
+                <div class="brands-item-header"> 
+                  <div class="brands-item-logo"> <img src="img/brands/logo4.png" alt="logo brands"></div>
+                  <h5 class="brands-item-title">iTechhouse</h5>
+                </div>
+                <div class="brands-item-body"> 
+                  <div class="brands-item-image"> <img src="img/brands/4.png" alt="Картинка брэнда"></div>
+                  <div class="brands-item-info"> 
+                    <h5>Стиралная машина</h5>
+                    <p>Техника для дома</p><span>$670</span>
+                  </div>
+                </div>
+              </li>
+              <li class="brands-item"> 
+                <div class="brands-item-header"> 
+                  <div class="brands-item-logo"> <img src="img/brands/logo5.png" alt="logo brands"></div>
+                  <h5 class="brands-item-title">iTechhouse</h5>
+                </div>
+                <div class="brands-item-body"> 
+                  <div class="brands-item-image"> <img src="img/brands/5.png" alt="Картинка брэнда"></div>
+                  <div class="brands-item-info"> 
+                    <h5>Стиралная машина</h5>
+                    <p>Техника для дома</p><span>$670</span>
+                  </div>
+                </div>
+              </li>
+              <li class="brands-item"> 
+                <div class="brands-item-header"> 
+                  <div class="brands-item-logo"> <img src="img/brands/logo4.png" alt="logo brands"></div>
+                  <h5 class="brands-item-title">iTechhouse</h5>
+                </div>
+                <div class="brands-item-body"> 
+                  <div class="brands-item-image"> <img src="img/brands/6.png" alt="Картинка брэнда"></div>
+                  <div class="brands-item-info"> 
+                    <h5>Стиралная машина</h5>
+                    <p>Техника для дома</p><span>$670</span>
+                  </div>
+                </div>
+              </li>
+              <li class="brands-item"> 
+                <div class="brands-item-header"> 
+                  <div class="brands-item-logo"> <img src="img/brands/logo1.png" alt="logo brands"></div>
+                  <h5 class="brands-item-title">iTechhouse</h5>
+                </div>
+                <div class="brands-item-body"> 
+                  <div class="brands-item-image"> <img src="img/brands/7.png" alt="Картинка брэнда"></div>
+                  <div class="brands-item-info"> 
+                    <h5>Стиралная машина</h5>
+                    <p>Техника для дома</p><span>$670</span>
+                  </div>
+                </div>
+              </li>
+              <li class="brands-item"> 
+                <div class="brands-item-header"> 
+                  <div class="brands-item-logo"> <img src="img/brands/logo2.png" alt="logo brands"></div>
+                  <h5 class="brands-item-title">iTechhouse</h5>
+                </div>
+                <div class="brands-item-body"> 
+                  <div class="brands-item-image"> <img src="img/brands/8.png" alt="Картинка брэнда"></div>
+                  <div class="brands-item-info"> 
+                    <h5>Стиралная машина</h5>
+                    <p>Техника для дома</p><span>$670</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <button class="btn btn-big btn-white btn-center">Показать ещё</button>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="footer__top"> 
+          <div class="container">
+            <div class="footer__top-body"><a href="/"> <img src="img/svg/logo-white.svg" alt="Makler"></a>
+              <ul> 
+                <li> <a href="#">Реклама дателям</a></li>
+                <li> <a href="#">Инструкции по публикации</a></li>
+                <li> <a href="#">Инструкции по публикации</a></li>
+              </ul>
+              <ul> 
+                <li> <a href="#">Помощь</a></li>
+                <li> <a href="#">Тех поддержка </a></li>
+                <li> <a href="#">+998 90 123-45-67</a></li>
+                <li> <a href="#">1187</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__center">
+          <div class="container">
+            <div class="footer__center-body"> 
+              <p>'Someday' is a disease that will take your dreams to the grave with you. Just do it and correct course along the way.</p>
+              <ul>
+                <li> <img src="img/svg/payme.svg" alt="payme"></li>
+                <li> <img src="img/svg/click.svg" alt="click"></li>
+                <li> <img src="img/svg/upay.svg" alt="upay"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container"> 
+            <div class="footer__bottom-body"> 
+              <ul> 
+                <li>
+                  <p>Copyright 2022 R</p>
+                </li>
+                <li><a class="line-link" href="#">Условия использование </a></li>
+                <li><a class="line-link" href="#">Политика конфеденциалности</a></li>
+              </ul>
+              <ul class="social-links">
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-fb w-12">
+                      <use xlink:href="img/symbol/sprite.svg#fb"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-inst w-12">
+                      <use xlink:href="img/symbol/sprite.svg#inst"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-telegram w-12">
+                      <use xlink:href="img/symbol/sprite.svg#telegram"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-tw w-12">
+                      <use xlink:href="img/symbol/sprite.svg#tw"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-in w-12">
+                      <use xlink:href="img/symbol/sprite.svg#in"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/app.min.js"></script>
+  </body>
+</html>

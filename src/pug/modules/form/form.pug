@@ -1,0 +1,17 @@
+.form
+	h3 Вы зарегистрированы?
+	p Если вы уже зарегистрированы, нажмите на кнопку  <a href="#">Войти</a>. 
+	form(action='#')
+		.form-input 
+			label Имя Фамилия*
+			input(type="text" placeholder="ФИО")
+		.form-input 
+			label Номер телефона*
+			input(type="text" value='+998')
+		.form-input 
+			label Дополнительный номер телефона!*
+			input(type="text" value="+998")
+		p Telegram
+		button.btn.btn-telegram
+			+icon('telegram', 'w-14')
+			span t.me://channel_username

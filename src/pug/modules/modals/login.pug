@@ -1,0 +1,15 @@
+.modal.login-modal.d-none
+	.modal-body 
+		a(href="#").close-btn 
+			+icon('close')
+		h4 Войти или зарегистрироваться
+		p Пожалуйста, введите номер телефона, который подтвердил вашу учетную запись!
+		.alert-form
+			img(src="@img/svg/30.svg", alt="30 days")
+			p Вы имеете право размещать бесплатные объявления в течение 30 дней после регистрации! Спасибо, что выбрали нас!
+		form(action="#")
+			.form-input 
+				label Номер телефона
+				input(type="text" id='telephone' name='telephone' value="+998")
+				button.btn.btn-orange Подтвердит номер телефона
+				p <a href="#">Войти другом способом!</a> | <a href="#">Нужна помощь?</a> 

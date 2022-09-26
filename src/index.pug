@@ -1,0 +1,12 @@
+extends ./pug/templates/main
+
+block variables
+	- var title = 'Makler'
+	- var pageClass = 'index-page'
+
+block content
+	include ./pug/modules/alert/alert
+	include ./pug/modules/sections/01_main
+	include ./pug/modules/sections/03_cards
+	include ./pug/modules/sections/02_nav-additional
+	include ./pug/modules/sections/04_download-app

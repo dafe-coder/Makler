@@ -1,0 +1,183 @@
+section.create-product-s 
+	.container 
+		.create-product 
+			.create-product__left
+				h2 Добавить новое <br>объявление
+				p.subtitle Объявление будет доступно на <a href='makler.uz'>Makler.uz</a> и в наших <br>мобильных приложениях
+				h5 Выберите тип объявления
+				.create-product-btns.mb-30
+					button.btn.btn-orange Сдать в аренду
+					button.btn.btn-white Продажа недвижимости
+				h5 Тип аренды
+				ul.switch-list.mb-40
+					li.switch-btn 
+						input(type='radio' id='long' name="time" checked required)
+						label(for='long') Длительно
+					li.switch-btn  
+						input(type='radio' id='month' name="time" required)
+						label(for='month') На несколько месяцев
+					li.switch-btn 
+						input(type='radio' id='day' name="time" required)
+						label(for='day') Посуточно
+				h5 Тип недвижимости
+				ul.radio-list.mb-60
+					li.radio-btn 
+						input(type='radio' id='living' name="type" checked required)
+						label(for='living') Жилая	
+					li.radio-btn 
+						input(type='radio' id='commercial' name="type" required)
+						label(for='commercial') Коммерческая	
+				h5 Объект
+				ul.radio-list.mb-50
+					li.radio-btn 
+						input(type="radio" id='flat' name='object' required)
+						label(for='flat') Квартира
+					li.radio-btn 
+						input(type="radio" id='room' name='object' required)
+						label(for='room') Комната
+					li.radio-btn 
+						input(type="radio" id='dacha' name='object' required)
+						label(for='dacha') Дача
+					li.radio-btn 
+						input(type="radio" id='house' name='object' required)
+						label(for='house') Дом
+					li.radio-btn 
+						input(type="radio" id='part' name='object' required)
+						label(for='part') Часть дома
+					li.radio-btn 
+						input(type="radio" id='townhouse' name='object' required)
+						label(for='townhouse') Таунхаус
+					li.radio-btn 
+						input(type="radio" id='some' name='object' required)
+						label(for='some') Койко-место
+				h5 Расположение
+				.map.mb-50
+					.map-info
+						h5 Где находится?
+						.map-address
+							input(placeholder='г.Ташкент, ул.Охангарон 65 А 1')
+							button.btn.btn-black Сохранить
+					p.error-par Такой геолокации не существует
+					#map
+				h5 Изображения объекта
+				.image-upload.mb-50
+					.image-outer 
+						.image-outer-info
+							h5 Перетащите сюда свои изображения или нажмите сюда
+							p Поддерживает: .jpg, .png, .jpeg
+						input(type="file" id='images' accept="image/png, image/jpeg, image/jpg" multiple)
+						label(for='images' ) открыть
+					.image-progress 
+						.files-name Uploading...
+							span img128371.jpg
+						.progress
+							progress(id="progress-bar" max=100 value=0)
+							.progress-bg
+								.progress-bar
+					ul.image-list#gallery
+				h5 Вся информация об объекте
+				.sizes.mb-50
+					p Площадь, м² *
+					.sizes-inputs
+						input(placeholder='Общая' type='number')
+						input(placeholder='Жилая' type='number')
+						input(placeholder='Кухня' type='number')
+					.sizes-input 
+						label Количество комнат *
+						input(placeholder='Общая' type='number')
+					.sizes-input 
+						label Этаж*
+						input(placeholder='Общая' type='number')
+					.sizes-input 
+						label Этаж из*
+						input(placeholder='Общая' type='number')
+				h5 Тип строения
+				ul.radio-list.mb-50
+					li.radio-btn 
+						input(type="radio" id='type-brick' name='type-building')
+						label(for='type-brick') Кирпич
+					li.radio-btn 
+						input(type="radio" id='type-monolith' name='type-building')
+						label(for='type-monolith') Монолит
+					li.radio-btn 
+						input(type="radio" id='type-panel' name='type-building')
+						label(for='type-panel') Панель
+					li.radio-btn 
+						input(type="radio" id='type-block' name='type-building')
+						label(for='type-block') Блочный
+				ul.ipoteka-list.mb-40
+					li.radio-list
+						h5 Ипотека
+						.radios
+							.radio-btn 
+								input(type="radio" id='ipoteka-yes' name='ipoteka')
+								label(for='ipoteka-yes') да
+							.radio-btn 
+								input(type="radio" id='ipoteka-no' name='ipoteka')
+								label(for='ipoteka-no') нет 
+					li.radio-list
+						h5 Новостройка
+						.radios
+							.radio-btn 
+								input(type="radio" id='new-buildings-yes' name='new-buildings')
+								label(for='new-buildings-yes') да
+							.radio-btn 
+								input(type="radio" id='new-buildings-no' name='new-buildings')
+								label(for='new-buildings-no') нет 
+					li.radio-list
+						h5 Меблирована
+						.radios
+							.radio-btn 
+								input(type="radio" id='furnishings-yes' name='furnishings')
+								label(for='furnishings-yes') да
+							.radio-btn 
+								input(type="radio" id='furnishings-no' name='furnishings')
+								label(for='furnishings-no') нет 
+				h5 Все удобства
+				ul.checkbox-list.mb-40
+					li.checkbox-btn
+						input(type="checkbox" id="comfort-long")
+						label(for="comfort-long") 
+							+icon('tags-1', 'w-16')
+							span Долгосрочная аренда
+					li.checkbox-btn
+						input(type="checkbox" id="comfort-family")
+						label(for="comfort-family") 
+							+icon('tags-2', 'w-16')
+							span Family
+					li.checkbox-btn
+						input(type="checkbox" id="comfort-room")
+						label(for="comfort-room") 
+							+icon('tags-3', 'w-16')
+							span 3 room
+					li.checkbox-btn
+						input(type="checkbox" id="comfort-notarius")
+						label(for="comfort-notarius") 
+							+icon('tags-4', 'w-16')
+							span Нотариус
+					li.checkbox-btn
+						input(type="checkbox" id="comfort-tv")
+						label(for="comfort-tv") 
+							+icon('tags-5', 'w-16')
+							span TV
+					li.checkbox-btn
+						input(type="checkbox" id="comfort-cart")
+						label(for="comfort-cart") 
+							+icon('tags-6', 'w-16')
+							span Рядом Корзинка
+					li.checkbox-btn
+						input(type="checkbox" id="comfort-wifi")
+						label(for="comfort-wifi") 
+							+icon('tags-7', 'w-16')
+							span Wi-Fi
+				.confirm-checkbox
+					input(type="checkbox" id= "confirm-data")
+					label(for='confirm-data') 
+						p Я прочитал и согласен с условиями использования <br>и публикации!
+						+icon('check', 'w-12')
+				.btns
+					button.btn.btn-black Сохранить как черновик
+					button.btn.btn-orange Опубликовать объявление 
+			.create-product__right
+				h5 Контактная информация
+				include ../form/form

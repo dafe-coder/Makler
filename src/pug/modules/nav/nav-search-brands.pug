@@ -1,0 +1,53 @@
+.nav-search 
+	.container 	
+		ul.nav-search-body 
+			li.nav-search_how
+				label Как
+				a(href="#").choose-btn.choose-btn-round#choose-how
+					span Об устройство
+					+icon('fi_chevron-down', 'w-12') 
+				.nav-body-choose
+					ul
+						li 
+							a(href="#").btn.btn-orange-light.active Купить 	
+						li 
+							a(href="#").btn.btn-orange-light Продать 	
+			li.nav-search_type
+				label Тип
+				a(href="#").choose-btn.choose-btn-link#choose-type
+					span Бытовая техника для дома 
+					+icon('fi_chevron-down', 'w-12')
+				.nav-body-choose
+					ul
+						li 
+							a(href="#").btn.btn-orange-light.active Квартиру 	
+						li 
+							a(href="#").btn.btn-orange-light Дома 	
+						li 
+							a(href="#").btn.btn-orange-light Участка 
+					ul
+						li 
+							a(href="#").btn.btn-orange-light Комната 	
+						li 
+							a(href="#").btn.btn-orange-light Дача 	
+			li.nav-search_address
+				label Адрес
+				a(href="#") 
+					+icon('fi_navigation', 'w-16')
+					span г.Ташкент, Чилонзор
+			li.nav-search_rooms
+				label Кол-во комнат
+				ul.rooms-list#choose-room
+					li 
+						a(href="#") 1 
+					li 
+						a(href="#") 2
+					li
+						a(href="#") 3 
+					li 
+						a(href="#") 4 
+					li 
+						a(href="#") 5+ 
+			li 
+				button.btn.show-btn-orange Показать
+

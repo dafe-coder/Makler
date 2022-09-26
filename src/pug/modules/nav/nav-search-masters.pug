@@ -1,0 +1,49 @@
+.nav-search 
+	.container.nav-search-container 	
+		ul.nav-search-body 
+			li.nav-search_how
+				label Как
+				a(href="#").choose-btn.choose-btn-round#choose-how
+					span Ремонт
+					+icon('fi_chevron-down', 'w-12') 
+				.nav-body-choose
+					ul
+						li 
+							a(href="#").btn.btn-orange-light.active Ремонт 	
+						li 
+							a(href="#").btn.btn-orange-light Строить 	
+						li 
+							a(href="#").btn.btn-orange-light Пилить 	
+						li 
+							a(href="#").btn.btn-orange-light Смотреть 	
+			li.nav-search_type
+				label Тип
+				a(href="#").choose-btn.choose-btn-link#choose-type
+					span Деятельности мастера 
+					+icon('fi_chevron-down', 'w-12')
+				.nav-body-choose
+					ul
+						li 
+							a(href="#").btn.btn-orange-light.active Сантехник 	
+						li 
+							a(href="#").btn.btn-orange-light Ученный 	
+						li 
+							a(href="#").btn.btn-orange-light Программист 
+					ul
+						li 
+							a(href="#").btn.btn-orange-light Жених на час
+						li 
+							a(href="#").btn.btn-orange-light Застройщик
+						li 
+							a(href="#").btn.btn-orange-light Бухгалтер
+			li.nav-search_address
+				label Адрес
+				a(href="#") 
+					+icon('fi_navigation', 'w-16')
+					span г.Ташкент, ул. Амир Темур 65 А дом 
+			li 
+				button.btn.show-btn-orange Показать
+		button.btn.btn-dark-gray.icon-left
+			+icon('fi_users', 'fill-n w-16')
+			span Вы мастер?
+

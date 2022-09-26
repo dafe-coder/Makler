@@ -1,0 +1,60 @@
+.banner {
+	background: #fff url('@img/ads.png') center center / cover no-repeat;
+	padding: rem(35px) rem(40px);
+	h5 {
+		font-family: SFProDisplay_900;
+		font-size: rem(24px);
+		line-height: rem(26px);
+		color: #000000;
+	}
+	width: rem(284px);
+	min-height: rem(362px);
+}
+
+.simple {
+	display: flex;
+	justify-content: center;
+	@include tablet {
+		flex-wrap: wrap;
+	}
+	&-s {
+		padding: rem(70px) 0 rem(185px);
+	}
+	&__left {
+		margin-right: rem(127px);
+		max-width: 519px;
+		width: 100%;
+		@include tablet {
+			margin-right: 0;
+			margin-bottom: 50px;
+		}
+		h2 {
+			font-family: SFProDisplay_800;
+			font-size: rem(28px);
+			line-height: rem(33px);
+			color: #0B0B0B;
+			margin-bottom: rem(20px);
+		}
+		h6 {
+			font-family: TimesNewRoman_400;
+			font-weight: 400;
+			font-style: italic;
+			font-size: rem(13px);
+			line-height: rem(18px);
+			color: #0B0B0B;
+			margin-bottom: rem(30px);
+		}
+		p {
+			margin-bottom: rem(10px);
+			font-family: SFProDisplay_400;
+			font-size: rem(15px);
+			line-height: rem(23px);
+			color: #0B0B0B;
+		}
+		img {
+			max-width: 100%;
+			width: 100%;
+			margin-top: rem(30px);
+		}
+	}
+}

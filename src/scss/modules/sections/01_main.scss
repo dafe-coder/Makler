@@ -1,0 +1,10 @@
+.main {
+	&-s {
+		min-height: 90vh;
+		background: url('@img/svg/bg-main.svg') center center / cover no-repeat;
+		padding-top: rem(10px);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}

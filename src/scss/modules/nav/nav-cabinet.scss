@@ -1,0 +1,117 @@
+.cabinet-nav {
+	padding: rem(40px) rem(37px) rem(64px);
+	background: #FFFFFF;
+	width: rem(342px);
+	@include laptop {
+		padding: 20px 20px 40px;
+	}
+}
+
+.cabinet {
+	&-profile {
+		display: flex;
+		margin-bottom: rem(40px);
+		&-logo {
+			margin-right: rem(15px);
+			img {
+				width: rem(96px);
+				height: rem(96px);
+				object-fit: cover;
+			}
+		}
+		&-info {
+			h4 {
+				font-family: SFProDisplay_700;
+				font-size: rem(17px);
+				line-height: rem(20px);
+				color: #000000;
+				margin-bottom: rem(8px);
+			}
+			p {
+				font-family: SFProDisplay_400;
+				font-size: rem(11px);
+				line-height: rem(13px);
+				color: #000000;
+				opacity: 0.5;
+			}
+		}
+	}
+	&-nav {
+		&-list {
+			li {
+				&.active {
+					button {
+						font-family: SFProDisplay_600;
+						color: $orange;
+						background: #F9F0E9;
+						svg {
+							&:last-of-type {
+								display: none;
+							}
+					
+							&:first-child {
+								display: block;
+							}
+						}
+					}
+				}
+				button {
+					transition: all ease .2s;
+					font-family: SFProDisplay_400;
+					font-size: rem(15px);
+					line-height: rem(18px);
+					color: #000000;
+					padding: rem(14px) rem(20px);
+					width: auto;
+					white-space: nowrap;
+					svg {
+						&:first-child {
+							display: none;
+						}
+					}
+					&:hover {
+						font-family: SFProDisplay_600;
+						color: $orange;
+						svg {
+							&:last-of-type {
+								display: none;
+							}
+							&:first-child {
+								display: block;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.logout-link {
+	font-family: SFProDisplay_400;
+	font-size: rem(15px);
+	line-height: rem(18px);
+	color: #000000;
+	display: flex;
+	margin-top: rem(105px);
+	margin-left: rem(20px);
+	svg {
+		&:first-child {
+			display: none;
+		}
+	}
+	&:hover {
+		font-family: SFProDisplay_600;
+		color: $orange;
+	
+		svg {
+			&:last-of-type {
+				display: none;
+			}
+	
+			&:first-child {
+				display: block;
+			}
+		}
+	}
+}

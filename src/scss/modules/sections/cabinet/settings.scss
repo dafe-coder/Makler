@@ -1,0 +1,94 @@
+.settings {
+	&-profile {
+		display: flex;
+		& > * {&:not(:last-child) {
+			margin-right: rem(16px);
+		}}
+		&-logo {
+			width: rem(96px);
+			height: rem(96px);
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&-info {
+			padding-top: rem(14px);
+			h3 {
+				font-family: SFProDisplay_700;
+				font-size: rem(17px);
+				line-height: rem(20px);
+				color: #000000;
+				margin-bottom: rem(12px);
+			}
+			button {
+				padding: rem(5px) rem(10px);
+				font-size: rem(11px);
+				line-height: rem(13px);
+			}
+		}
+	} 
+	&-form {
+		margin-top: rem(22px);
+		display: flex;
+		flex-wrap: wrap;
+		& > *:not(:nth-child(2n)) {
+			margin-right: 2.1%;
+		}
+		.form-input {
+			flex-basis: 48.95%;
+		}
+		.change-password {
+			margin-right: 0;
+		}
+	}
+	.btn-orange {
+		width: auto;
+		padding: rem(13px) rem(32px);
+	}
+}
+
+.change-password {
+	background: #FFFFFF;
+	border-radius: 3px;
+	padding: rem(30px) rem(60px) rem(65px) rem(30px);
+	margin-bottom: rem(48px);
+	h3 {
+		font-family: SFProDisplay_800;
+		font-size: rem(22px);
+		line-height: rem(26px);
+		color: #0B0B0B;
+		margin-bottom: 7px;
+	}
+	&-subtitle {
+		font-family: SFProDisplay_400;
+		font-size: rem(11px);
+		line-height: rem(16px);
+		color: #0B0B0B;
+		margin-bottom: rem(27px);
+	}
+	label {
+		font-family: SFProDisplay_400;
+		font-size: rem(13px);
+		line-height: rem(18px);
+		color: #0F1826;
+		display: flex;
+		margin-bottom: rem(10px);
+	}
+	input {
+		background: #FFFFFF;
+		border: 1px solid #DEDEDE;
+		border-radius: 4px;
+		padding: rem(14px);
+		width: 100%;
+	}
+	&-par {
+		font-family: SFProDisplay_400;
+		font-size: rem(11px);
+		line-height: rem(13px);
+		color: #0F1826;
+		opacity: 0.4;
+		margin-top: rem(10px);
+	}
+}

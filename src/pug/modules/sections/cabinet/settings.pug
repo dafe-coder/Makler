@@ -1,0 +1,29 @@
+section.settings-s.d-none#settings
+	.container-sm 
+		.settings 
+			.settings-profile 
+				.settings-profile-logo 
+					img(src="@img/avatar-big.png", alt="Аватар")
+				.settings-profile-info
+					h3 Abbos Janizakov
+					button.btn.btn-border-orange Изменить фото профиля 
+			form.settings-form
+				.form-input 	
+					label Имя Фамилия
+					input(type="text" value='Abbos Janizakov')
+				.form-input 	
+					label Электронная почта
+					input(type="text" value='abbosjanizakov@mail.ru')
+				.form-input 	
+					label Номер телефона |  Ваше логин
+					input(type="text" value='+998 90 123-45-67')
+				.form-input 	
+					label Пароль
+					input(type="password" placeholder='пусто')
+				.change-password 
+					h3 Изменить пароль
+					p.change-password-subtitle После создания постоянного пароля для своего профиля вам необходимо будет подтвердить его с помощью прикрепленного смс-кода!
+					label Пароль
+					input(type="password" placeholder='пусто')
+					p.change-password-par Создайте постоянный пароль для входа в аккаунт!
+				button.btn.btn-orange Сохранить изменения

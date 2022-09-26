@@ -1,0 +1,37 @@
+.cabinet-nav
+	.cabinet-profile 
+		.cabinet-profile-logo 
+			img(src="@img/avatar-big.png", alt="Логотип")
+		.cabinet-profile-info
+			h4 Abbos Janizakov
+			p id:123981
+	ul.cabinet-nav-list
+		li.active
+			button.btn.btn-orange-light.left-icon#product-link
+				+icon('fi_book-o', 'fill-n w-16')
+				+icon('fi_book', 'fill-n w-16')
+				span Мои объявления
+		li 
+			button.btn.btn-orange-light.left-icon#notifications-link
+				+icon('fi_mail-o', 'fill-n w-16')
+				+icon('fi_mail', 'fill-n w-16')
+				span Уведомлении
+		li 
+			button.btn.btn-orange-light.left-icon#draft-link
+				+icon('fi_book-o', 'fill-n w-16')
+				+icon('fi_book', 'fill-n w-16')
+				span Черновик
+		li 
+			button.btn.btn-orange-light.left-icon#archive-link
+				+icon('fi_archive-o', 'fill-n w-16')
+				+icon('fi_archive', 'fill-n w-16')
+				span Архив
+		li 
+			button.btn.btn-orange-light.left-icon#settings-link
+				+icon('fi_settings-o', 'fill-n w-16')
+				+icon('fi_settings', 'fill-n w-16')
+				span Настроить профиль
+	a(href="#").logout-link.left-icon#log-out
+		+icon('fi_log-out-o', 'fill-n w-16') 
+		+icon('fi_log-out', 'fill-n w-16') 
+		span Выйти из профиля

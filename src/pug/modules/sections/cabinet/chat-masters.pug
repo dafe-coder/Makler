@@ -1,0 +1,72 @@
+section.chat-s#chat 
+	.container
+		.chat 
+			.chat__left 
+				ul.chat-list
+					li.chat-item 
+						a(href="#") 
+							.chat-item-logo 
+								.logo 	
+									span HF
+							.chat-item-info
+								h5 Habibullo Farxodov
+								p Был в сети: 
+									span 18:32
+					li.chat-item.active
+						a(href="#") 
+							.chat-item-logo 
+								.logo 	
+									img(src="@img/logo.png", alt="logo")
+							.chat-item-info
+								h5 Makler.uz
+								p Был в сети: 
+									span 18:32
+					li.chat-item 
+						a(href="#") 
+							.chat-item-logo 
+								.logo 	
+									span HF
+							.chat-item-info
+								h5 Muhammad
+								p Был в сети: 
+									span 18:32
+					li.chat-item 
+						a(href="#") 
+							.chat-item-logo 
+								.logo 	
+									span HF
+							.chat-item-info
+								h5 id:23904
+								p Был в сети: 
+									span 18:32
+					li.chat-item 
+						a(href="#") 
+							.chat-item-logo 
+								.logo 	
+									span HF
+							.chat-item-info
+								h5 Rixsitillo Hamidov
+								p Был в сети: 
+									span 18:32
+			.chat__right
+				.chat-body 
+					.chat-header 
+						p Чат
+						button.btn 
+							+icon('dots')
+					ul.chat-messages 
+						li
+							p Привет! Уважаемый пользователь, мы хотели бы сообщить вам, что, поскольку вы используете наш сайт, вам предоставляется скидка на рекламу! Ура Ура Ура Ура!
+							span.chat-messages-time 09:02
+						li
+							p Привет! Уважаемый пользователь, мы хотели бы сообщить вам, что, поскольку вы используете наш сайт, вам предоставляется скидка на рекламу! Ура Ура Ура Ура!
+							span.chat-messages-time 09:02
+						li.your-sms
+							span.your-span Вы
+							p Привет! Уважаемый пользователь, мы хотели бы сообщить вам, что, поскольку вы используете наш сайт, вам предоставляется скидка на рекламу! Ура Ура Ура Ура!
+							span.chat-messages-time 09:02
+					.chat-footer
+						form(action='#') 
+							input(type="text" placeholder='Пишите ваш текст' required)
+							button(type='submit').btn
+								+icon('send', 'fill-n')

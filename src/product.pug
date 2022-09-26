@@ -1,0 +1,12 @@
+extends ./pug/templates/main
+
+block variables
+	- var title = 'Open product'
+	- var pageClass = 'product-page'
+
+block content
+	include ./pug/modules/nav/nav-search
+	include ./pug/modules/sections/12_slider
+	include ./pug/modules/sections/06_info-product
+	include ./pug/modules/sections/02_nav-additional
+	include ./pug/modules/sections/04_download-app

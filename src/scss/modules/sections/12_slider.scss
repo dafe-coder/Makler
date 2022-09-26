@@ -1,0 +1,130 @@
+.slider {
+	&-s {
+		margin-bottom: rem(40px);
+	}
+	&-body {
+		display: flex;
+		@include laptop {
+			flex-wrap: wrap;
+		}
+	}
+	&__left {
+		flex-basis: pers(813px);
+		margin-right: pers(10px);
+		overflow: hidden;
+		@include laptop {
+			flex-basis: 100%;
+			margin-bottom: 10px;
+			margin-right: 0;
+		}
+		.swiper {
+			@include size(100%, rem(440px));
+			img {
+				@include size(100%);
+				object-fit: cover;
+			}
+		}
+	}
+	&__right {
+		flex-basis: pers(574px);
+		@include laptop {
+			flex-basis: 100%;
+		}
+		ul {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: rem(10px);
+			li {
+				height: rem(215px);
+				@include tablet {
+					height: 10rem;
+				}
+				@include phones {
+					height: 8rem;
+				}
+				img {
+					@include size(100%);
+					object-fit: cover;
+				}
+			}
+		}
+	}
+}
+.product-page {
+	.slider-s {
+		margin-top: rem(40px);
+	}
+}
+.swiper {
+	.swiper-button-prev, .swiper-button-next {
+		left: auto;
+		right: rem(65px);
+		bottom: rem(18px);
+		top: auto;
+		@include size(rem(30px));
+		background: #FFFFFF;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 10;
+		&::after {
+			display: none !important;
+		}
+		svg {
+			height: rem(12px);
+			transform: scale(-1);
+		}
+	}
+	.swiper-button-next {
+		right: rem(25px);
+		svg {
+			transform: scale(1);
+		}
+	}
+	.swiper-scrollbar {
+		width: 70%;
+		left: auto;
+		bottom: rem(30px);
+		right: rem(135px);
+		height: 1px;
+		background: rgba(255, 255, 255, 0.3);
+		@include tablet {
+			width: 50%;
+		}
+		.swiper-scrollbar-drag {
+			background: #fff;
+			height: 5px;
+			border-radius: 0;
+			margin-top: -2px;
+		}
+	}
+
+	.swiper-pagination {
+		color: transparent;
+		bottom: rem(15px);
+		width: auto;
+		left: rem(25px);
+		span {
+			font-family: SFProDisplay_400; 
+			font-size: rem(17px);
+			line-height: rem(30px);
+			color: #FFFFFF;
+			&:last-of-type {
+				margin-left: rem(6px);
+				color: rgba($color: #fff, $alpha: 0.3);
+				position: relative;
+				&::after {
+					content: '';
+					left: -9px;
+					top: 50%;
+					transform: translateY(-50%) scale(-1);
+					height: 100%;
+					width: 2px;
+					background-color: #fff;
+					position: absolute;
+				}
+			}
+		}
+	}
+}

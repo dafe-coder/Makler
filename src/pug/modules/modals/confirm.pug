@@ -1,0 +1,12 @@
+.modal.login-modal.confirm-modal.d-none
+	.modal-body 
+		a(href="#").close-btn 
+			+icon('close')
+		h4 Подтвердите свой номер телефона!
+		p На указанный номер телефона отправлено СМС с кодом. <br> Подтвердите этот код!
+		form(action="#")
+			.form-input 
+				label СМС код
+				input(type="text" id='telephone' name='telephone' placeholder="1231")
+				button.btn.btn-orange Войти в профиль
+				p <a href="#">Войти другом способом!</a> | <a href="#">Нужна помощь?</a> 

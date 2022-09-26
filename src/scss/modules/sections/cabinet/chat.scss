@@ -1,0 +1,200 @@
+.chat {
+	display: flex;
+	background: #FFFFFF;
+	margin-right: rem(10px);
+	height: 100%;
+	&-s {
+		max-width: rem(580px);
+		width: 100%;
+		.container {
+			max-width: 100%;
+			height: 100%;
+			@include laptop-max {
+				padding: 0;
+			}
+		}
+	}
+	&-list {
+		& > * {&:not(:last-child) {
+			border-bottom: 1px solid rgba(11, 11, 11, 0.1);
+		}}
+	}
+	&-item {
+		a {
+			padding: rem(16px);
+			display: flex;
+			transition: all ease .3s;
+			max-height: rem(80px);
+			&:hover {
+				background: #F9F0E9;
+				.logo span {
+					color: $white;
+				}
+				.chat-item-logo {
+					background: $orange;
+				}
+			} 
+		}
+		&.active {
+			a {
+				background: #F9F0E9;
+			}
+			.chat-item-logo {
+				background: $orange;
+			}
+			.logo span {
+				color: $white;
+			}
+		}
+		&-logo {
+			margin-right: rem(5px);
+			background: #F9F0E9;
+			width: rem(48px);
+			height: rem(48px);
+			border-radius: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+			transition: all ease .3s;
+			
+			span {
+				font-weight: 700;
+				font-size: rem(15px);
+				line-height: rem(18px);
+				text-align: center;
+				color: $orange;
+			}
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&-info {
+			padding-top: rem(5px);
+			h5 {
+				font-family: SFPRoDisplay_400;
+				font-size: rem(13px);
+				line-height: rem(16px);
+				color: #000000;
+				margin-bottom: rem(5px);
+				font-weight: 400;
+			}
+			p {
+				font-family: SFPRoDisplay_400;
+				font-size: rem(11px);
+				line-height: rem(13px);
+				color: #000000;
+				opacity: 0.4;
+			}
+		}
+	}
+	&__left {
+		max-width: rem(225px);
+		width: 100%;
+		border-right: 1px solid rgba(11, 11, 11, 0.1);
+	}
+	&__right {
+		max-width: rem(352px);
+		width: 100%;
+	}
+	&-body {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+	&-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid rgba(11, 11, 11, 0.1);
+		padding: rem(16px) rem(20px);
+		p {
+			font-family: SFPRoDisplay_400;
+			font-size: rem(15px);
+			line-height: rem(18px);
+			color: #0B0B0B;
+		}
+		button {
+			display: flex;
+			background: none;
+			svg {
+				width: rem(3px);
+				height: rem(13px);
+				fill: #0B0B0B;
+				opacity: 0.3;
+			}
+		}
+	}
+	&-messages {
+		padding: rem(20px) rem(20px) rem(50px);
+		flex-grow: 1;
+		flex-shrink: 0;
+		&-time {
+			font-family: SFPRoDisplay_400;
+			font-size: rem(11px);
+			line-height: rem(13px);
+			color: #0B0B0B;
+			opacity: 0.4;
+		}
+		& > * {&:not(:last-child) {
+			margin-bottom: rem(26px);
+		}}
+		li {
+			p {
+				font-family: SFPRoDisplay_400;
+				font-size: rem(13px);
+				line-height: rem(18px);
+				color: #0B0B0B;
+				margin-bottom: rem(15px);
+			}
+			.your-span {
+				font-family: SFPRoDisplay_400;
+				font-size: rem(11px);
+				line-height: rem(13px);
+				color: #0B0B0B;
+				opacity: 0.4;
+				margin-bottom: rem(10px);
+				display: flex;
+			}
+			&.your-sms {
+				margin-top: rem(60px);
+			}
+		}
+	}
+	&-footer {
+		border-top: 1px solid rgba(11, 11, 11, 0.1);
+		form {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			align-items: center;
+		}
+		input {
+			flex-grow: 1;
+			flex-shrink: 1;
+			border: none;
+			padding: rem(17px) rem(15px);
+			font-family: SFProDisplay_400;
+			font-size: rem(13px);
+			line-height: rem(16px);
+			color: rgba($color: #0B0B0B, $alpha: .4);
+		}
+		button {
+			flex-grow: 0;
+			flex-shrink: 0;
+			display: flex;	
+			padding: 0;
+			height: rem(28px);
+			background: none;
+			border-left: 1px solid rgba(11, 11, 11, 0.1);
+			margin-right: rem(15px);
+			padding-left: rem(11px);
+			svg {
+				width: rem(28px);
+				height: rem(28px);
+			}
+		}
+	}
+}

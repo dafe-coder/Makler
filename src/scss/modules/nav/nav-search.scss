@@ -1,0 +1,173 @@
+.nav-search {
+	margin-top: rem(43px);
+	.btn-search {
+		font-family: SFProDisplay_700;
+		padding: rem(15px) rem(32px);
+		font-size: rem(13px);
+		line-height: rem(16px);
+		text-align: center;
+		color: #FFFFFF;
+		@include phones {
+			width: 100%;
+		}
+	}
+	&-body {
+		background: #FFFFFF;
+		border-radius: rem(3px);
+		padding: rem(9px) rem(10px);
+		display: flex;
+		flex-wrap: wrap;
+		& > li {
+			position: relative;
+			display: flex;
+			align-items: center;
+			@include tablet {
+				&:nth-child(1), &:nth-child(2) {
+					flex-basis: 50%;
+					margin-bottom: 60px;
+					margin-top: 30px;
+				}
+				&:nth-child(3) {
+					flex-basis: 100%;
+					margin-bottom: 60px;
+				}
+			}
+			@include phones {
+				&:last-child {
+					flex-basis: 100%;
+					margin-top: 30px;
+				}
+			}
+			label {
+				position: absolute;
+				top: -30px;
+			}
+			&:last-of-type {
+				flex-grow: 0;
+				flex-shrink: 0;
+			}
+			a {
+				color: $black;
+			}
+			.choose-btn-round {
+				padding: rem(10px) rem(14px);
+			}
+			.choose-btn {
+				svg {
+					transition: all ease .3s;
+					fill: $white;
+				}
+				&.active {
+					svg {
+						transform: scale(-1);
+					}
+				}
+			}
+		}
+	}
+	&_how {
+		padding-right: rem(29px);
+		flex-shrink: 0;
+		flex-grow: 0;
+		@include phones {
+			padding-right: 10px;
+		}
+	}
+	&_rooms {
+		flex-grow: 1;
+		flex-shrink: 0;
+		padding-right: rem(29px);
+	}
+	&_address {
+		flex-shrink: 0;
+		flex-grow: 1; 
+		padding-right: rem(29px);
+		svg {
+			margin-right: rem(6px);
+			fill: $white;
+		}
+	}
+	&_type {
+		flex-shrink: 0;
+		flex-grow: 0;
+		padding-right: rem(29px);
+		width: rem(290px);
+		& > a {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			padding: 0;
+		}
+	}
+}
+.nav-body-choose {
+	background: #FFFFFF;
+	box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.12);
+	border-radius: 3px;
+	position: absolute;
+	top: calc(100% + 13px);
+	padding: rem(7px) rem(7px) rem(20px);
+	left: rem(-10px);
+	z-index: 10;
+	display: flex;
+	width: max-content;
+	opacity: 0;
+	transition: all ease .3s;
+	visibility: hidden;
+	& > * {&:not(:last-child) {
+		margin-right: 10px;
+	}}
+	a {
+		width: rem(181px);
+	}
+	&.active {
+	visibility: visible;
+		opacity: 1;
+	}
+}
+.rooms-list {
+	display: flex;
+	& > * {&:not(:last-child) {
+		margin-right: rem(5px);
+	}}
+	li {
+		a {
+			border-radius: rem(50px);
+			background: $gray;
+			display: flex;
+			width: 100%;
+			height: rem(36px);
+			min-width: rem(36px);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 rem(14px);
+			font-family: SFProDisplay_600;
+			color: $black;
+			transition: all ease .2s;
+			line-height: rem(16px);
+			&:hover {
+				background: $orange;
+				color: $white;
+			}
+			&.active {
+				color: $white;
+				background: $orange;
+			}
+		}
+		
+	}
+}
+
+.nav-search-container {
+	display: flex;
+	align-items: center;
+	ul {
+		flex-grow: 1;
+		flex-shrink: 1;
+	}
+	& > * {&:not(:last-child) {
+		margin-right: rem(14px);
+	}}
+}

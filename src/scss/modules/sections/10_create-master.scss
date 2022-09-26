@@ -1,0 +1,206 @@
+.create-master {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	.btns {
+		display: flex;
+		margin-top: rem(40px);
+		& > * {&:not(:last-child) {
+			margin-right: rem(10px);
+		}}
+		button {
+			border-radius: 3px;
+			flex-basis: 50%;
+		}
+	}
+	&-s {
+		padding: rem(52px) 0 rem(236px);
+		h2 {
+			font-family: SFProDisplay_800;
+			font-size: rem(28px);
+			line-height: rem(33px);
+			color: #0B0B0B;
+			margin-bottom: rem(12px);
+		}
+		.subtitle {
+			font-weight: SFProDisplay_400;
+			font-size: rem(13px);
+			line-height: rem(18px);
+			color: #0B0B0B;
+			margin-bottom: rem(37px);
+			a {
+				font-weight: 700;
+				color: $orange;
+			}
+		}
+		h5 {
+			font-family: SFProDisplay_400;
+			font-size: rem(13px);
+			line-height: rem(16px);
+			color: #0B0B0B;
+			font-weight: 400;
+			margin-bottom: rem(15px);
+		}
+		h4 {
+			font-family: SFProDisplay_700;
+			font-size: rem(17px);
+			line-height: rem(20px);
+			color: #0B0B0B;
+			margin-bottom: rem(35px);
+		}
+	}
+	&__left {
+		max-width: rem(460px);
+		width: 100%;
+		@include laptop {
+			order: 1;
+		}
+	}
+	&__right {
+		max-width: rem(342px);
+		width: 100%;
+		margin-left: rem(127px);
+		@include laptop {
+			order: 2;
+		}
+	}
+
+	&-btns {
+		display: flex;
+		background-color: $white;
+		button {
+			font-family: SFProDisplay_600;
+			flex-basis: 50%;
+		}
+	}
+	&-inputs {
+		margin-top: rem(37px);
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: rem(10px);
+	}
+	&-text {
+		label {
+			font-family: SFProDisplay_400;
+			font-size: rem(13px);
+			line-height: rem(18px);
+			color: #0F1826;
+			margin-bottom: rem(10px);
+			display: block;
+		}
+		textarea {
+			width: 100%;
+			background: #FFFFFF;
+			border: 1px solid #DEDEDE;
+			border-radius: 4px;
+			height: rem(132px);
+			padding: rem(13px) rem(14px);
+		}
+	}
+	
+}
+
+.select {
+	margin-bottom: rem(20px);
+	label {
+		font-family: SFProDisplay_400;
+		font-size: rem(13px);
+		line-height: rem(18px);
+		color: #0F1826;
+		margin-bottom: rem(10px);
+		display: block;
+	}
+	button {
+		background: #FFFFFF;
+		border: 1px solid #DEDEDE;
+		border-radius: 4px;
+		width: 100%;
+		padding: rem(13px) rem(14px);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.upload-avatar {
+	background: #FFFFFF;
+	border-radius: 3px;
+	padding: rem(10px);
+	display: flex;
+	.avatar-circle {
+		width: rem(96px);
+		height: rem(96px);
+		background: rgba($color: $orange, $alpha: .1);
+		border-radius: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: rem(15px);
+		svg {
+			width: rem(24px);
+			height: rem(24px);
+		}
+	}
+	&__right {
+		p {
+			font-family: SFProDisplay_400;
+			font-size: rem(13px);
+			line-height: rem(17px);
+			color: #000000;
+			margin-bottom: rem(11px);
+			margin-top: rem(10px);
+		}
+		label {
+			font-family: SFProDisplay_400;
+			font-size: rem(11px);
+			line-height: rem(13px);
+			color: $orange;
+			border: 1px solid $orange;
+			border-radius: 50px;
+			padding: rem(5px) rem(10px);
+			cursor: pointer;
+		}
+		input {
+			display: none;
+		}
+	}
+}
+
+.info-box {
+	background: #FFFFFF;
+	border-radius: 3px;
+	padding: rem(30px) rem(30px) rem(109px);
+	h5 {
+		font-family: SFProDisplay_700;
+		font-size: rem(20px);
+		line-height: rem(24px);
+		color: #0B0B0B;
+		margin-bottom: rem(22px);
+	}
+	h3 {
+		font-family: SFProDisplay_600;
+		font-size: rem(15px);
+		line-height: rem(18px);
+		color: #0B0B0B;
+		margin-bottom: rem(10px);
+	}
+	.info-par {
+		font-weight: 400;
+		font-size: rem(12px);
+		line-height: rem(17px);
+		color: #0B0B0B;
+		margin-bottom: rem(15px);
+	}
+}
+
+.alert-info {
+	font-family: TimesNewRoman_400;
+	font-style: italic;
+	font-size: rem(13px);
+	line-height: rem(17px);
+	color: $orange;
+	padding: rem(15px);
+	background: rgba($color: $orange, $alpha: 0.1);
+	border-radius: 4px;
+	margin-bottom: rem(12px);
+}
