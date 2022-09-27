@@ -1,0 +1,47 @@
+.breadcrumbs {
+	display: flex;
+	align-items: center;
+	& > * {&:not(:last-child) {
+		margin-right: 15px;
+		a {
+			color: rgba(11, 11, 11, 0.2);
+			position: relative;
+			&::after {
+				content: '/';
+				font-family: inherit;
+				color: rgba(11, 11, 11, 0.2);
+				position: absolute;
+				right: rem(-10px);
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}}
+	li {
+		&:first-child {
+			a {
+					position: relative;
+			
+					&::after {
+						content: '|';
+						font-family: inherit;
+						color: rgba(11, 11, 11, 0.2);
+						position: absolute;
+						right: rem(-10px);
+						top: 50%;
+						transform: translateY(-50%);
+					}
+				}
+		}
+		a {
+			font-family: SFProDisplay_600;
+			font-size: rem(13px);
+			line-height: rem(16px);
+		}
+		&:last-child {
+			a {
+				color: #0B0B0B;
+			}
+		}
+	}
+}

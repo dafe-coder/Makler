@@ -6,22 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/style.min.css">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=c5bd98ea-afd9-433c-909d-a54b6459fb30&amp;lang=ru_RU" type="text/javascript"></script><!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20220926220854">
+    <link rel="stylesheet" type="text/css" href="./css/style.min.css?_v=20220926220854">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c5bd98ea-afd9-433c-909d-a54b6459fb30&amp;lang=ru_RU&_v=20220926220854" type="text/javascript"></script><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js?_v=20220926220854"></script><![endif]-->
   </head>
   <body class="index-page">
     <div class="wrapper">
       <header class="header"> 
         <div class="container"> 
-          <div class="header-body"><a href="/"><img src="img/svg/logo.svg" alt="Makler"></a>
-            <ul class="breadcrumbs">
-              <li> <a href="#"> 
-                  <svg class="svg-sprite-icon icon-fi_arrow-left fill-n w-16">
-                    <use xlink:href="img/symbol/sprite.svg#fi_arrow-left"></use>
-                  </svg></a></li>
-            </ul>
+          <div class="header-body">
+            <div class="header__left"><a href="/"><img src="img/svg/logo.svg" alt="Makler"></a>
+              <ul class="breadcrumbs">
+                <li> <a href="/"> 
+                    <svg class="svg-sprite-icon icon-fi_arrow-left fill-n w-16 d-none">
+                      <use xlink:href="img/symbol/sprite.svg#fi_arrow-left"></use>
+                    </svg>
+                    <svg class="svg-sprite-icon icon-fi_home fill-n w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_home"></use>
+                    </svg></a></li>
+                <li> <a href="#">Ремонт</a></li>
+                <li> <a href="#">Сантехник</a></li>
+                <li> <a href="#">Abduvali Eshonqulov </a></li>
+              </ul>
+            </div>
             <div class="header-nav">
               <button class="hamburger hamburger--collapse" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
               <ul class="header-nav-list">
@@ -33,17 +41,14 @@
                     <svg class="svg-sprite-icon icon-fi_heart w-16">
                       <use xlink:href="img/symbol/sprite.svg#fi_heart"></use>
                     </svg></a></li>
-                <li> <a href="#">
+                <li> <a href="/cabinet.html">
                     <svg class="svg-sprite-icon icon-fi_log-in w-16">
                       <use xlink:href="img/symbol/sprite.svg#fi_log-in"></use>
                     </svg><span>Профиль </span></a></li>
-                <li>
-                  <button class="btn btn-orange-text">
+                <li><a class="btn btn-orange-text" href="/create-product.html">
                     <svg class="svg-sprite-icon icon-fi_plus w-16">
                       <use xlink:href="img/symbol/sprite.svg#fi_plus"></use>
-                    </svg><span>разместить объявление</span>
-                  </button>
-                </li>
+                    </svg><span>разместить объявление</span></a></li>
               </ul>
             </div>
           </div>
@@ -107,7 +112,7 @@
             <div class="open-info"> 
               <div class="open-info__left"> 
                 <div class="open-info-profile"> 
-                  <div class="logo"> <img src="img/avatar-big.png" alt="logo"></div>
+                  <div class="logo"> <picture><source srcset="img/avatar-big.webp" type="image/webp"><img src="img/avatar-big.png" alt="logo"></picture></div>
                   <h5>Abduvali Eshonqulov</h5>
                   <p class="open-position">Мастер, 3 года опыта</p>
                   <ul class="open-tags">
@@ -136,10 +141,10 @@
               <div class="slider__left">
                 <div class="swiper">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide"> <img src="img/slider/1.png" alt="Картинка слайдера"></div>
-                    <div class="swiper-slide"> <img src="img/slider/2.png" alt="Картинка слайдера"></div>
-                    <div class="swiper-slide"> <img src="img/slider/3.png" alt="Картинка слайдера"></div>
-                    <div class="swiper-slide"> <img src="img/slider/4.png" alt="Картинка слайдера"></div>
+                    <div class="swiper-slide"> <picture><source srcset="img/slider/1.webp" type="image/webp"><img src="img/slider/1.png" alt="Картинка слайдера"></picture></div>
+                    <div class="swiper-slide"> <picture><source srcset="img/slider/2.webp" type="image/webp"><img src="img/slider/2.png" alt="Картинка слайдера"></picture></div>
+                    <div class="swiper-slide"> <picture><source srcset="img/slider/3.webp" type="image/webp"><img src="img/slider/3.png" alt="Картинка слайдера"></picture></div>
+                    <div class="swiper-slide"> <picture><source srcset="img/slider/4.webp" type="image/webp"><img src="img/slider/4.png" alt="Картинка слайдера"></picture></div>
                   </div>
                   <div class="swiper-button-prev"> 
                     <svg class="svg-sprite-icon icon-left-arr fill-n">
@@ -157,10 +162,10 @@
               </div>
               <div class="slider__right">
                 <ul> 
-                  <li> <img src="img/slider/1.png" alt="Картинка 1"></li>
-                  <li> <img src="img/slider/2.png" alt="Картинка 2"></li>
-                  <li> <img src="img/slider/3.png" alt="Картинка 3"></li>
-                  <li> <img src="img/slider/4.png" alt="Картинка 4"></li>
+                  <li> <picture><source srcset="img/slider/1.webp" type="image/webp"><img src="img/slider/1.png" alt="Картинка 1"></picture></li>
+                  <li> <picture><source srcset="img/slider/2.webp" type="image/webp"><img src="img/slider/2.png" alt="Картинка 2"></picture></li>
+                  <li> <picture><source srcset="img/slider/3.webp" type="image/webp"><img src="img/slider/3.png" alt="Картинка 3"></picture></li>
+                  <li> <picture><source srcset="img/slider/4.webp" type="image/webp"><img src="img/slider/4.png" alt="Картинка 4"></picture></li>
                 </ul>
               </div>
             </div>
@@ -172,7 +177,7 @@
               <h5 class="section-title-sm">Рекомендуем похожие</h5>
               <ul class="masters-list"> 
                 <li class="masters-item">
-                  <div class="masters-item-logo"> <img src="img/avatar-big.png" alt="аватар"></div>
+                  <div class="masters-item-logo"> <picture><source srcset="img/avatar-big.webp" type="image/webp"><img src="img/avatar-big.png" alt="аватар"></picture></div>
                   <div class="masters-item-info"> 
                     <h5>Abduvali Eshonqulov</h5>
                     <p>Мастер, 3 года опыта</p>
@@ -188,7 +193,7 @@
                   <p class="masters-item-address">Ташкент, Шайхантахурский район</p>
                 </li>
                 <li class="masters-item">
-                  <div class="masters-item-logo"> <img src="img/avatar-big.png" alt="аватар"></div>
+                  <div class="masters-item-logo"> <picture><source srcset="img/avatar-big.webp" type="image/webp"><img src="img/avatar-big.png" alt="аватар"></picture></div>
                   <div class="masters-item-info"> 
                     <h5>Abduvali Eshonqulov</h5>
                     <p>Мастер, 3 года опыта</p>
@@ -204,7 +209,7 @@
                   <p class="masters-item-address">Ташкент, Шайхантахурский район</p>
                 </li>
                 <li class="masters-item">
-                  <div class="masters-item-logo"> <img src="img/avatar-big.png" alt="аватар"></div>
+                  <div class="masters-item-logo"> <picture><source srcset="img/avatar-big.webp" type="image/webp"><img src="img/avatar-big.png" alt="аватар"></picture></div>
                   <div class="masters-item-info"> 
                     <h5>Abduvali Eshonqulov</h5>
                     <p>Мастер, 3 года опыта</p>
@@ -219,7 +224,7 @@
                   <p class="masters-item-address">Ташкент, Шайхантахурский район</p>
                 </li>
                 <li class="masters-item">
-                  <div class="masters-item-logo"> <img src="img/avatar-big.png" alt="аватар"></div>
+                  <div class="masters-item-logo"> <picture><source srcset="img/avatar-big.webp" type="image/webp"><img src="img/avatar-big.png" alt="аватар"></picture></div>
                   <div class="masters-item-info"> 
                     <h5>Abduvali Eshonqulov</h5>
                     <p>Мастер, 3 года опыта</p>
@@ -304,7 +309,7 @@
         </div>
       </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/app.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20220926220854"></script>
+    <script src="./js/app.min.js?_v=20220926220854"></script>
   </body>
 </html>

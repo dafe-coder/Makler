@@ -7,6 +7,13 @@
 		align-items: center;
 		justify-content: space-between;
 	}
+	&__left {
+		display: flex;
+		align-items:center;
+		& > * {&:not(:last-child) {
+			margin-right: rem(40px);
+		}}
+	}
 	&-nav {
 		display: flex;
 		align-items: center;

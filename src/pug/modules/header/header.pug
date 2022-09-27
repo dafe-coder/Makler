@@ -1,9 +1,10 @@
 header.header 
 	.container 
 		.header-body
-			a(href="/")
-				img(src="@img/svg/logo.svg", alt="Makler")  
-			include ../nav/breadcrumbs
+			.header__left
+				a(href="/")
+					img(src="@img/svg/logo.svg", alt="Makler")  
+				include ../nav/breadcrumbs
 			.header-nav
 				button.hamburger.hamburger--collapse(type='button')
 					span.hamburger-box
@@ -17,10 +18,10 @@ header.header
 						a(href="#")
 							+icon('fi_heart', 'w-16') 
 					li 
-						a(href="#")
+						a(href="/cabinet.html")
 							+icon('fi_log-in', 'w-16')
 							span Профиль 
 					li
-						button.btn.btn-orange-text
+						a(href="/create-product.html").btn.btn-orange-text
 							+icon('fi_plus', 'w-16')
 							span разместить объявление
