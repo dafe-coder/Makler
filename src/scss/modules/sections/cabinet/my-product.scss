@@ -106,6 +106,41 @@
 			}
 		}
 	}
+	&-settings {
+		position: relative;
+		&-body {
+			position: absolute;
+			top: rem(55px);
+			right: rem(10px);
+			padding: rem(25px) rem(40px) rem(25px) rem(25px);
+			background: $white;
+			border-radius: 3px;
+			box-shadow: 0px 0px 10px 3px rgb(0,0,0,0.05);
+			visibility: visible;
+			opacity: 0;
+			z-index: 4;
+			visibility: hidden;
+			transition: all ease .2s;
+			&.active {
+				opacity: 1;
+				visibility: visible;
+			}
+			ul {
+				& > * {&:not(:last-child) {
+					margin-bottom: 20px;
+				}}
+			}
+			a {
+				font-family: SFProDisplay_600;
+				font-size: rem(14px);
+				color: $black;
+				transition: all ease .2s;
+				&:hover {
+					color: $orange
+				}
+			}
+		}
+	}
 }
 .statistic-list {
 	display: flex;

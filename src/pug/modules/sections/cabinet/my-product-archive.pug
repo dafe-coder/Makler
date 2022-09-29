@@ -4,8 +4,19 @@ section.advert-s.d-none#archive
 			ul.advert-list 
 				li.advert-item 
 					.advert-item__top 
-						button.btn.btn-settings
-							+icon('dots', 'w-16')
+						.advert-settings
+							button.btn.btn-settings
+								+icon('dots', 'w-16')
+							.advert-settings-body.choose-body
+								ul 
+									li 
+										a(href="#") Активировать 
+									li 
+										a(href="#") Деактивировать 
+									li 
+										a(href="#") Изменить 
+									li 
+										a(href="#") Удалить 
 						img(src="@img/cards/1.png", alt="Картинка Объявления")
 					.advert-item__bottom  
 						.advert-item-info

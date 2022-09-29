@@ -5,12 +5,16 @@ import renderMap from './modules/map.js'
 import dropImages from './modules/upload-images.js'
 import navTabsEvent from './modules/nav-tabs.js'
 import uploadImages from './modules/upload-images.js'
-
+import multiSelect from './modules/multi-select.js'
+import openChooseBodyAll from './modules/choose-all.js'
 document.addEventListener('DOMContentLoaded', () => {
 	showAlert('#alert-home', 1000)
 
-	openChooseBody('#choose-how')
-	openChooseBody('#choose-type')
+	openChooseBody('#choose-how', '.select-choose')
+	openChooseBody('#choose-type', '.select-choose')
+	openChooseBody('#work-years', '.select')
+	openChooseBodyAll('.btn-settings', '.advert-settings')
+	multiSelect('#select-career', '.select')
 
 	chooseRoom('#choose-room')
 

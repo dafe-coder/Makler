@@ -2,7 +2,7 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Open product</title><!--[if IE]>
+    <title>Save products</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
@@ -11,7 +11,7 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=c5bd98ea-afd9-433c-909d-a54b6459fb30&amp;lang=ru_RU" type="text/javascript"></script><!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
   </head>
-  <body class="index-page">
+  <body class="product-page">
     <div class="wrapper">
       <header class="header"> 
         <div class="container"> 
@@ -52,20 +52,65 @@
         </div>
       </header>
       <div class="content">
-        <section class="simple-s">
+        <section class="save-products-s"> 
           <div class="container"> 
-            <div class="simple">
-              <div class="simple__left">
-                <h2>Это отдельная страница, где мы используем ее для предоставления информации, выходящей за рамки основной идеи сайта!</h2>
-                <h6>Если есть краткое описание темы, мы дадим его так!</h6>
-                <p>Например, внизу сайта есть меню для рекламодателей, поэтому, когда пользователь нажмет на него, откроется информационная страница для рекламодателей, и она будет выглядеть вот так!			</p>
-                <p>Я также должен упомянуть, что данные могут содержать случаи видео и изображений, поэтому я подумал, что было бы хорошо выводить их в точном размере! И я сделал это так!</p><img src="img/simple.png" alt="Картинка простая">
-              </div>
-              <div class="simple__right">
-                <div class="banner">
-                  <h5>Рекламная <br>зона</h5>
-                </div>
-              </div>
+            <div class="save-products"> 
+              <ul class="cards-list"> 
+                <li class="cards-item"> <a href="/product.html"> 
+                    <div class="cards-item__top"> 
+                      <button class="btn-save save">
+                        <svg class="svg-sprite-icon icon-save">
+                          <use xlink:href="img/symbol/sprite.svg#save"></use>
+                        </svg>
+                      </button><img src="img/cards/1.png" alt="">
+                    </div>
+                    <div class="cards-item__bottom">
+                      <div class="cards-item-info"> 
+                        <div class="cards-item-info__top">
+                          <p>2 Комнатая кв, 63м²</p><span>400$</span>
+                        </div>
+                        <div class="cards-item-info__bottom"> 
+                          <p>Ташкент, Шайхантахурский район</p><span>22:52</span>
+                        </div>
+                      </div>
+                    </div></a></li>
+                <li class="cards-item"> <a href="#"> 
+                    <div class="cards-item__top"> 
+                      <button class="btn-save save">
+                        <svg class="svg-sprite-icon icon-save">
+                          <use xlink:href="img/symbol/sprite.svg#save"></use>
+                        </svg>
+                      </button><img src="img/cards/2.png" alt="">
+                    </div>
+                    <div class="cards-item__bottom">
+                      <div class="cards-item-info"> 
+                        <div class="cards-item-info__top">
+                          <p>2 Комнатая кв, 63м²</p><span>400$</span>
+                        </div>
+                        <div class="cards-item-info__bottom"> 
+                          <p>Ташкент, Шайхантахурский район</p><span>22:52</span>
+                        </div>
+                      </div>
+                    </div></a></li>
+                <li class="cards-item top"><a href="#"> 
+                    <div class="cards-item__top"> <span class="top-span">TOP</span>
+                      <button class="btn-save save">
+                        <svg class="svg-sprite-icon icon-save">
+                          <use xlink:href="img/symbol/sprite.svg#save"></use>
+                        </svg>
+                      </button><img src="img/cards/3.png" alt="">
+                    </div>
+                    <div class="cards-item__bottom">
+                      <div class="cards-item-info"> 
+                        <div class="cards-item-info__top">
+                          <p>2 Комнатая кв, 63м²</p><span>400$</span>
+                        </div>
+                        <div class="cards-item-info__bottom"> 
+                          <p>Ташкент, Шайхантахурский район</p><span>22:52</span>
+                        </div>
+                      </div>
+                    </div></a></li>
+              </ul>
             </div>
           </div>
         </section>

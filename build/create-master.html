@@ -37,7 +37,7 @@
                     <svg class="svg-sprite-icon icon-fi_globe w-16">
                       <use xlink:href="img/symbol/sprite.svg#fi_globe"></use>
                     </svg><span>Русский  </span></a></li>
-                <li> <a href="#">
+                <li> <a href="/save-products.html">
                     <svg class="svg-sprite-icon icon-fi_heart w-16">
                       <use xlink:href="img/symbol/sprite.svg#fi_heart"></use>
                     </svg></a></li>
@@ -95,21 +95,41 @@
                     <label>Краткое описание о себе</label><textarea name="about_me" placeholder='пусто'></textarea> 
                   </div>
                   <h4>Выберите раздел и специализацию *</h4>
-                  <div class="select"> 
+                  <div class="select multi-select">
                     <label>Введите род деятельности!</label>
-                    <button class="btn"> <span>деятельности</span>
+                    <button class="btn" id="select-career">
+                      <ul> 
+                        <li>Сантехник</li>
+                      </ul>
                       <svg class="svg-sprite-icon icon-fi_chevron-down w-12 fill-n">
                         <use xlink:href="img/symbol/sprite.svg#fi_chevron-down"></use>
                       </svg>
                     </button>
+                    <div class="nav-body-choose">
+                      <ul>
+                        <li> <a class="btn btn-orange-light active" href="#">Сантехник</a></li>
+                        <li> <a class="btn btn-orange-light" href="#">Мебельщик</a></li>
+                        <li> <a class="btn btn-orange-light" href="#">Уборшик</a></li>
+                      </ul>
+                      <ul>
+                        <li> <a class="btn btn-orange-light" href="#">Электрик</a></li>
+                        <li> <a class="btn btn-orange-light" href="#">Мастер окон</a></li>
+                      </ul>
+                    </div>
                   </div>
                   <div class="select"> 
                     <label>Опыт работы</label>
-                    <button class="btn"> <span>от 3 лет</span>
+                    <button class="btn" id="work-years"><span>от 3 лет</span>
                       <svg class="svg-sprite-icon icon-fi_chevron-down w-12 fill-n">
                         <use xlink:href="img/symbol/sprite.svg#fi_chevron-down"></use>
                       </svg>
                     </button>
+                    <div class="nav-body-choose">
+                      <ul>
+                        <li> <a class="btn btn-orange-light active" href="#">Купить 	</a></li>
+                        <li> <a class="btn btn-orange-light" href="#">Продать 	</a></li>
+                      </ul>
+                    </div>
                   </div>
                   <h5>Территория обслужование</h5>
                   <div class="map mb-50">

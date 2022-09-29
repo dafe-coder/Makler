@@ -12,10 +12,12 @@ export function showAlert(selector, delay) {
 	}
 }
 
-export function openChooseBody(selector) {
+export function openChooseBody(selector, selectorWrap) {
 	const btnOpen = document.querySelector(selector)
 	if (btnOpen) {
-		const bodyChoose = btnOpen.closest('li').querySelector('.nav-body-choose')
+		const bodyChoose = btnOpen
+			.closest(selectorWrap)
+			.querySelector('.nav-body-choose')
 		btnOpen.addEventListener('click', (e) => {
 			e.preventDefault()
 

@@ -1421,6 +1421,10 @@ input::placeholder {
   color: #000000;
 }
 
+.save-products-s {
+  padding-top: 2.1rem;
+}
+
 .header {
   background: #FFFFFF;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.05);
@@ -2474,6 +2478,10 @@ ul.social-links li a:hover {
 }
 .cards button {
   margin: 0 auto;
+}
+
+.save svg {
+  fill: #ffffff;
 }
 
 .alert {
@@ -4219,6 +4227,7 @@ ul.social-links li a:hover {
 .cabinet {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 .cabinet-s {
   padding: 2.875rem 0 18.3125rem;
@@ -4410,6 +4419,11 @@ ul.social-links li a:hover {
 
 .select {
   margin-bottom: 1.25rem;
+  position: relative;
+}
+.select .nav-body-choose {
+  left: 0;
+  top: calc(100% + 1px);
 }
 .select label {
   font-family: SFProDisplay_400;
@@ -4428,6 +4442,28 @@ ul.social-links li a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.select button ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.select button ul > *:not(:last-child) {
+  margin-right: 0.625rem;
+}
+.select button ul > *:not(:last-child)::after {
+  content: ", ";
+}
+.select button ul li {
+  margin-bottom: 5px;
+}
+
+.multi-select button {
+  padding-bottom: 8px;
+  min-height: 2.6125rem;
+}
+
+.nav-body-choose a {
+  color: #111111;
 }
 
 .upload-avatar {
@@ -4948,6 +4984,39 @@ ul.social-links li a:hover {
 }
 .advert-item-status.success-status svg {
   right: 0;
+}
+.advert-settings {
+  position: relative;
+}
+.advert-settings-body {
+  position: absolute;
+  top: 3.4375rem;
+  right: 0.625rem;
+  padding: 1.5625rem 2.5rem 1.5625rem 1.5625rem;
+  background: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.05);
+  visibility: visible;
+  opacity: 0;
+  z-index: 4;
+  visibility: hidden;
+  transition: all ease 0.2s;
+}
+.advert-settings-body.active {
+  opacity: 1;
+  visibility: visible;
+}
+.advert-settings-body ul > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+.advert-settings-body a {
+  font-family: SFProDisplay_600;
+  font-size: 0.875rem;
+  color: #111111;
+  transition: all ease 0.2s;
+}
+.advert-settings-body a:hover {
+  color: #C56622;
 }
 
 .statistic-list {

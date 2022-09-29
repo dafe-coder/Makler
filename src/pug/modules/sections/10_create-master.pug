@@ -30,16 +30,36 @@ section.create-master-s
 						label Краткое описание о себе
 						<textarea name="about_me" placeholder='пусто'></textarea> 
 					h4 Выберите раздел и специализацию *
-					.select 
+					.select.multi-select
 						label Введите род деятельности!
-						button.btn 
-							span деятельности
+						button.btn#select-career
+							ul 
+								li Сантехник
 							+icon('fi_chevron-down', 'w-12 fill-n')
+						.nav-body-choose
+							ul
+								li 
+									a(href="#").btn.btn-orange-light.active Сантехник
+								li 
+									a(href="#").btn.btn-orange-light Мебельщик
+								li 
+									a(href="#").btn.btn-orange-light Уборшик
+							ul
+								li 
+									a(href="#").btn.btn-orange-light Электрик
+								li 
+									a(href="#").btn.btn-orange-light Мастер окон
 					.select 
 						label Опыт работы
-						button.btn 
+						button.btn#work-years
 							span от 3 лет
 							+icon('fi_chevron-down', 'w-12 fill-n')
+						.nav-body-choose
+							ul
+								li 
+									a(href="#").btn.btn-orange-light.active Купить 	
+								li 
+									a(href="#").btn.btn-orange-light Продать 	
 					h5 Территория обслужование
 					.map.mb-50
 						.map-info

@@ -102,6 +102,11 @@
 
 .select {
 	margin-bottom: rem(20px);
+	position: relative;
+	.nav-body-choose {
+		left: 0;
+		top: calc(100% + 1px);
+	}
 	label {
 		font-family: SFProDisplay_400;
 		font-size: rem(13px);
@@ -119,9 +124,32 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			& > * {&:not(:last-child) {
+				margin-right: rem(10px);
+				&::after {
+					content: ', '
+				}
+			}}
+			li {
+				margin-bottom: 5px;
+			}
+		}
 	}
 }
-
+.multi-select {
+	button {
+		padding-bottom: 8px;
+		min-height: rem(41.8px);
+	}
+}
+.nav-body-choose { 
+	a {
+		color: $black;
+	}
+}
 .upload-avatar {
 	background: #FFFFFF;
 	border-radius: 3px;

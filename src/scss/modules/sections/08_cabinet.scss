@@ -1,6 +1,7 @@
 .cabinet {
 	display: flex;
 	justify-content: center;
+	align-items: flex-start;
 	&-s {
 		padding: rem(46px) 0 rem(293px);
 	}
