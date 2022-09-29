@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/style.min.css">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=c5bd98ea-afd9-433c-909d-a54b6459fb30&amp;lang=ru_RU" type="text/javascript"></script><!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20220930015354">
+    <link rel="stylesheet" type="text/css" href="./css/style.min.css?_v=20220930015354">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c5bd98ea-afd9-433c-909d-a54b6459fb30&amp;lang=ru_RU&_v=20220930015354" type="text/javascript"></script><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js?_v=20220930015354"></script><![endif]-->
   </head>
   <body class="index-page">
     <div class="wrapper">
@@ -75,7 +75,7 @@
             </form>
           </div>
         </div>
-        <div class="modal login-modal d-none">
+        <div class="modal login-modal">
           <div class="modal-body"> <a class="close-btn" href="#"> 
               <svg class="svg-sprite-icon icon-close">
                 <use xlink:href="img/symbol/sprite.svg#close"></use>
@@ -157,34 +157,30 @@
             <div class="container"> 
               <div class="categories"> 
                 <ul> 
-                  <li> 
-                    <div class="info"> 
-                      <h2>Новостройки <br>дома</h2>
-                      <p>Более 1240 новых домов</p>
-                    </div>
-                    <div class="img"> <img src="img/svg/cat1.svg" alt="Новостройки дома"></div>
-                  </li>
-                  <li> 
-                    <div class="info"> 
-                      <h2>Ипотечные <br>дома</h2>
-                      <p>Более 1240 ипотеки</p>
-                    </div>
-                    <div class="img"> <img src="img/svg/cat2.svg" alt="Новостройки дома"></div>
-                  </li>
-                  <li> 
-                    <div class="info"> 
-                      <h2>Ремонт <br>квартир, участок</h2>
-                      <p>Более 24 видов ремонта</p>
-                    </div>
-                    <div class="img"> <img src="img/svg/cat3.svg" alt="Новостройки дома"></div>
-                  </li>
-                  <li> 
-                    <div class="info"> 
-                      <h2>Обустройства <br>дома</h2>
-                      <p>Более 10 сервисов</p>
-                    </div>
-                    <div class="img"> <img src="img/svg/cat4.svg" alt="Новостройки дома"></div>
-                  </li>
+                  <li><a href="/houses-new.html"> 
+                      <div class="info"> 
+                        <h2>Новостройки <br>дома</h2>
+                        <p>Более 1240 новых домов</p>
+                      </div>
+                      <div class="img"> <img src="img/svg/cat1.svg" alt="Новостройки дома"></div></a></li>
+                  <li> <a href="/houses.html"> 
+                      <div class="info"> 
+                        <h2>Ипотечные <br>дома</h2>
+                        <p>Более 1240 ипотеки</p>
+                      </div>
+                      <div class="img"> <img src="img/svg/cat2.svg" alt="Новостройки дома"></div></a></li>
+                  <li><a href="/masters.html"> 
+                      <div class="info"> 
+                        <h2>Ремонт <br>квартир, участок</h2>
+                        <p>Более 24 видов ремонта</p>
+                      </div>
+                      <div class="img"> <img src="img/svg/cat3.svg" alt="Новостройки дома"></div></a></li>
+                  <li><a href="/brands.html"> 
+                      <div class="info"> 
+                        <h2>Обустройства <br>дома</h2>
+                        <p>Более 10 сервисов</p>
+                      </div>
+                      <div class="img"> <img src="img/svg/cat4.svg" alt="Новостройки дома"></div></a></li>
                 </ul>
               </div>
             </div>
@@ -213,7 +209,7 @@
                         <svg class="svg-sprite-icon icon-save">
                           <use xlink:href="img/symbol/sprite.svg#save"></use>
                         </svg>
-                      </button><img src="img/cards/1.png" alt="">
+                      </button><picture><source srcset="img/cards/1.webp" type="image/webp"><img src="img/cards/1.png" alt=""></picture>
                     </div>
                     <div class="cards-item__bottom">
                       <div class="cards-item-info"> 
@@ -225,13 +221,13 @@
                         </div>
                       </div>
                     </div></a></li>
-                <li class="cards-item"> <a href="#"> 
+                <li class="cards-item"> <a href="/product.html"> 
                     <div class="cards-item__top"> 
                       <button class="btn-save">
                         <svg class="svg-sprite-icon icon-save">
                           <use xlink:href="img/symbol/sprite.svg#save"></use>
                         </svg>
-                      </button><img src="img/cards/2.png" alt="">
+                      </button><picture><source srcset="img/cards/2.webp" type="image/webp"><img src="img/cards/2.png" alt=""></picture>
                     </div>
                     <div class="cards-item__bottom">
                       <div class="cards-item-info"> 
@@ -243,13 +239,13 @@
                         </div>
                       </div>
                     </div></a></li>
-                <li class="cards-item top"><a href="#"> 
+                <li class="cards-item top"><a href="/product.html"> 
                     <div class="cards-item__top"> <span class="top-span">TOP</span>
                       <button class="btn-save">
                         <svg class="svg-sprite-icon icon-save">
                           <use xlink:href="img/symbol/sprite.svg#save"></use>
                         </svg>
-                      </button><img src="img/cards/3.png" alt="">
+                      </button><picture><source srcset="img/cards/3.webp" type="image/webp"><img src="img/cards/3.png" alt=""></picture>
                     </div>
                     <div class="cards-item__bottom">
                       <div class="cards-item-info"> 
@@ -261,13 +257,13 @@
                         </div>
                       </div>
                     </div></a></li>
-                <li class="cards-item"> <a href="#"> 
+                <li class="cards-item"> <a href="/product.html"> 
                     <div class="cards-item__top"> 
                       <button class="btn-save">
                         <svg class="svg-sprite-icon icon-save">
                           <use xlink:href="img/symbol/sprite.svg#save"></use>
                         </svg>
-                      </button><img src="img/cards/4.png" alt="">
+                      </button><picture><source srcset="img/cards/4.webp" type="image/webp"><img src="img/cards/4.png" alt=""></picture>
                     </div>
                     <div class="cards-item__bottom">
                       <div class="cards-item-info"> 
@@ -279,13 +275,13 @@
                         </div>
                       </div>
                     </div></a></li>
-                <li class="cards-item"> <a href="#"> 
+                <li class="cards-item"> <a href="/product.html"> 
                     <div class="cards-item__top"> 
                       <button class="btn-save">
                         <svg class="svg-sprite-icon icon-save">
                           <use xlink:href="img/symbol/sprite.svg#save"></use>
                         </svg>
-                      </button><img src="img/cards/5.png" alt="">
+                      </button><picture><source srcset="img/cards/5.webp" type="image/webp"><img src="img/cards/5.png" alt=""></picture>
                     </div>
                     <div class="cards-item__bottom">
                       <div class="cards-item-info"> 
@@ -297,13 +293,13 @@
                         </div>
                       </div>
                     </div></a></li>
-                <li class="cards-item"> <a href="#"> 
+                <li class="cards-item"> <a href="/product.html"> 
                     <div class="cards-item__top"> 
                       <button class="btn-save">
                         <svg class="svg-sprite-icon icon-save">
                           <use xlink:href="img/symbol/sprite.svg#save"></use>
                         </svg>
-                      </button><img src="img/cards/6.png" alt="">
+                      </button><picture><source srcset="img/cards/6.webp" type="image/webp"><img src="img/cards/6.png" alt=""></picture>
                     </div>
                     <div class="cards-item__bottom">
                       <div class="cards-item-info"> 
@@ -315,13 +311,13 @@
                         </div>
                       </div>
                     </div></a></li>
-                <li class="cards-item"> <a href="#"> 
+                <li class="cards-item"> <a href="/product.html"> 
                     <div class="cards-item__top"> 
                       <button class="btn-save">
                         <svg class="svg-sprite-icon icon-save">
                           <use xlink:href="img/symbol/sprite.svg#save"></use>
                         </svg>
-                      </button><img src="img/cards/7.png" alt="">
+                      </button><picture><source srcset="img/cards/7.webp" type="image/webp"><img src="img/cards/7.png" alt=""></picture>
                     </div>
                     <div class="cards-item__bottom">
                       <div class="cards-item-info"> 
@@ -333,13 +329,13 @@
                         </div>
                       </div>
                     </div></a></li>
-                <li class="cards-item"> <a href="#"> 
+                <li class="cards-item"> <a href="/product.html"> 
                     <div class="cards-item__top"> 
                       <button class="btn-save">
                         <svg class="svg-sprite-icon icon-save">
                           <use xlink:href="img/symbol/sprite.svg#save"></use>
                         </svg>
-                      </button><img src="img/cards/8.png" alt="">
+                      </button><picture><source srcset="img/cards/8.webp" type="image/webp"><img src="img/cards/8.png" alt=""></picture>
                     </div>
                     <div class="cards-item__bottom">
                       <div class="cards-item-info"> 
@@ -512,7 +508,7 @@
         </div>
       </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/app.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20220930015354"></script>
+    <script src="./js/app.min.js?_v=20220930015354"></script>
   </body>
 </html>

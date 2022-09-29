@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/style.min.css">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=c5bd98ea-afd9-433c-909d-a54b6459fb30&amp;lang=ru_RU" type="text/javascript"></script><!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20220930015354">
+    <link rel="stylesheet" type="text/css" href="./css/style.min.css?_v=20220930015354">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c5bd98ea-afd9-433c-909d-a54b6459fb30&amp;lang=ru_RU&_v=20220930015354" type="text/javascript"></script><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js?_v=20220930015354"></script><![endif]-->
   </head>
   <body class="index-page">
     <div class="wrapper">
@@ -326,7 +326,7 @@
                 <h5>Контактная информация</h5>
                 <div class="form">
                   <h3>Вы зарегистрированы?</h3>
-                  <p>Если вы уже зарегистрированы, нажмите на кнопку  <a href="#">Войти</a>. </p>
+                  <p>Если вы уже зарегистрированы, нажмите на кнопку  <a href="#" id="login-modal">Войти</a>. </p>
                   <form action="#">
                     <div class="form-input"> 
                       <label>Имя Фамилия*</label>
@@ -352,6 +352,43 @@
             </div>
           </div>
         </section>
+        <div class="modal login-modal">
+          <div class="modal-body"> <a class="close-btn" href="#"> 
+              <svg class="svg-sprite-icon icon-close">
+                <use xlink:href="img/symbol/sprite.svg#close"></use>
+              </svg></a>
+            <h4>Войти или зарегистрироваться</h4>
+            <p>Пожалуйста, введите номер телефона, который подтвердил вашу учетную запись!</p>
+            <div class="alert-form"><img src="img/svg/30.svg" alt="30 days">
+              <p>Вы имеете право размещать бесплатные объявления в течение 30 дней после регистрации! Спасибо, что выбрали нас!</p>
+            </div>
+            <form action="#">
+              <div class="form-input"> 
+                <label>Номер телефона</label>
+                <input type="text" id="telephone" name="telephone" value="+998">
+                <button class="btn btn-orange">Подтвердит номер телефона</button>
+                <p><a href="#">Войти другом способом!</a> | <a href="#">Нужна помощь?</a> </p>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal login-modal confirm-modal d-none">
+          <div class="modal-body"> <a class="close-btn" href="#"> 
+              <svg class="svg-sprite-icon icon-close">
+                <use xlink:href="img/symbol/sprite.svg#close"></use>
+              </svg></a>
+            <h4>Подтвердите свой номер телефона!</h4>
+            <p>На указанный номер телефона отправлено СМС с кодом. <br> Подтвердите этот код!</p>
+            <form action="#">
+              <div class="form-input"> 
+                <label>СМС код</label>
+                <input type="text" id="telephone" name="telephone" placeholder="1231">
+                <button class="btn btn-orange">Войти в профиль</button>
+                <p><a href="#">Войти другом способом!</a> | <a href="#">Нужна помощь?</a> </p>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
       <footer class="footer">
         <div class="footer__top"> 
@@ -420,7 +457,7 @@
         </div>
       </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/app.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20220930015354"></script>
+    <script src="./js/app.min.js?_v=20220930015354"></script>
   </body>
 </html>

@@ -18,28 +18,31 @@
 			background: $white;
 			border-radius: rem(5px);
 			padding: rem(24px) rem(22px);
-			display: flex;
-			justify-content: space-between;
-			.info {
-				h2 {
-					font-family: SFProDisplay_600;
-					font-size: rem(17px);
-					line-height: rem(22px);
-					margin-bottom: rem(10px);
+				a {
+				display: flex;
+				justify-content: space-between;
+				.info {
+					h2 {
+						font-family: SFProDisplay_600;
+						font-size: rem(17px);
+						line-height: rem(22px);
+						margin-bottom: rem(10px);
+						color: $black;
+					}
+					p {
+						font-family: timesNewRoman_700;
+						color: $orange;
+						font-size: rem(14px);
+						line-height: rem(16px);
+						opacity: 0.7;
+						font-style: italic;
+					}
 				}
-				p {
-					font-family: timesNewRoman_700;
-					color: $orange;
-					font-size: rem(14px);
-					line-height: rem(16px);
-					opacity: 0.7;
-					font-style: italic;
-				}
-			}
-			.img {
-				height: rem(90px);
-				img {
-					height: 100%;
+				.img {
+					height: rem(90px);
+					img {
+						height: 100%;
+					}
 				}
 			}
 		}

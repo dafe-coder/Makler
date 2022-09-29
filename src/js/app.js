@@ -7,12 +7,15 @@ import navTabsEvent from './modules/nav-tabs.js'
 import uploadImages from './modules/upload-images.js'
 import multiSelect from './modules/multi-select.js'
 import openChooseBodyAll from './modules/choose-all.js'
+import openModal from './modules/open-modal.js'
+
 document.addEventListener('DOMContentLoaded', () => {
 	showAlert('#alert-home', 1000)
 
 	openChooseBody('#choose-how', '.select-choose')
 	openChooseBody('#choose-type', '.select-choose')
 	openChooseBody('#work-years', '.select')
+	openChooseBody('#sort-link', '.select-sort')
 	openChooseBodyAll('.btn-settings', '.advert-settings')
 	multiSelect('#select-career', '.select')
 
@@ -21,6 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	renderMap()
 
 	dropImages('.image-outer')
+
+	openModal('#login-modal', '.login-modal')
 
 	var swiper = new Swiper('.swiper', {
 		pagination: {

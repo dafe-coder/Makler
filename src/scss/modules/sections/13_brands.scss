@@ -6,7 +6,7 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		gap: rem(10px);
-		margin-top: rem(10px);
+		margin-top: rem(15px);
 		margin-bottom: rem(82px);
 		@include tablet {
 			grid-template-columns: repeat(2, 1fr)
@@ -16,11 +16,31 @@
 		}
  	}
 	&-item {
+		&:hover {
+			.brands-item-image {
+				&::after {
+					opacity: 0.4;
+				}
+				img {
+					transform: scale(1.1);
+				}
+			}
+			.brands-item-title, .brands-item-info h5 {
+				color: $orange
+			}
+		}
 		&-header {
 			padding: rem(12px) rem(30px);
 			background-color: #fff;
 			display: flex;
 			align-items: center;
+		}
+		&-title {
+			font-weight: 700;
+			font-size: rem(13px);
+			line-height: rem(16px);
+			color: #121212;
+			transition: all ease .2s;
 		}
 		&-logo {
 			@include size(rem(40px));
@@ -42,6 +62,7 @@
 				line-height: rem(18px);
 				color: #121212;
 				margin-bottom: 2px;
+				transition: all ease .2s;
 			}
 			p {
 				font-family: TimesNewRoman_400;
@@ -60,10 +81,25 @@
 			}
 		}
 		&-image {
+			position: relative;
+			overflow: hidden;
+			&::after {
+				content: "";
+				width: 100%;
+				height: 100%;
+				background-color: #111111;
+				opacity: 0;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				z-index: 1;
+				transition: all ease 0.3s;
+			}
 			img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+				transition: all ease .3s;
 			}
 		}
 	}

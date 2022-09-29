@@ -5,10 +5,13 @@
 	left: 0;
 	top: 0;
 	background: rgba($color: #000000, $alpha: 0.4);
-	display: flex;
+	display: none;
 	justify-content: center;
 	align-items: center;
 	z-index: 10000;
+	&.active {
+		display: flex;
+	}
 	&-body {
 		position: relative;
 		background: $white;
