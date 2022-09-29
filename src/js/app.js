@@ -2,8 +2,9 @@ import { isWebp } from './modules/functions.js'
 isWebp()
 import { showAlert, openChooseBody, chooseRoom } from './modules/main-page.js'
 import renderMap from './modules/map.js'
-import dropImages from './modules/drop-images.js'
+import dropImages from './modules/upload-images.js'
 import navTabsEvent from './modules/nav-tabs.js'
+import uploadImages from './modules/upload-images.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 	showAlert('#alert-home', 1000)
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	renderMap()
 
-	dropImages('.image-outer ')
+	dropImages('.image-outer')
 
 	var swiper = new Swiper('.swiper', {
 		pagination: {
@@ -45,6 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		navTabsEvent('draft-link', 'draft', 'cabinet')
 		navTabsEvent('notifications-link', 'chat', 'cabinet')
 		navTabsEvent('photos-work-link', 'photos-work', 'cabinet')
+	} catch (error) {
+		console.log(error)
+	}
+
+	try {
+		uploadImages('upload-images')
 	} catch (error) {
 		console.log(error)
 	}

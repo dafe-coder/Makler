@@ -6,8 +6,12 @@ section.create-product-s
 				p.subtitle Объявление будет доступно на <a href='makler.uz'>Makler.uz</a> и в наших <br>мобильных приложениях
 				h5 Выберите тип объявления
 				.create-product-btns.mb-30
-					button.btn.btn-orange Сдать в аренду
-					button.btn.btn-white Продажа недвижимости
+					.radio-btn-big
+						input(type="radio" name="type-product" id="rent" checked="true")
+						label(for="rent") Сдать в аренду
+					.radio-btn-big
+						input(type="radio" name="type-product" id="sale")
+						label(for="sale") Продажа недвижимости
 				h5 Тип аренды
 				ul.switch-list.mb-40
 					li.switch-btn 
@@ -65,15 +69,19 @@ section.create-product-s
 						.image-outer-info
 							h5 Перетащите сюда свои изображения или нажмите сюда
 							p Поддерживает: .jpg, .png, .jpeg
-						input(type="file" id='images' accept="image/png, image/jpeg, image/jpg" multiple)
-						label(for='images' ) открыть
+						input(type="file" name="files" id='upload-images' accept="image/png, image/jpeg, image/jpg" multiple)
+						label(for='upload-images' ) открыть
 					.image-progress 
-						.files-name Uploading...
-							span img128371.jpg
-						.progress
-							progress(id="progress-bar" max=100 value=0)
-							.progress-bg
-								.progress-bar
+						.image-progress__left
+							.files-name Uploading...
+								span img128371.jpg
+							.progress
+								progress(id="progress-bar")
+								.progress-bg
+									.progress-bar
+						.image-progress__right
+							button.btn.cancel-actions
+								+icon('fi_x')
 					ul.image-list#gallery
 				h5 Вся информация об объекте
 				.sizes.mb-50

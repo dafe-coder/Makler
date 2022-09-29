@@ -16,12 +16,26 @@
 	font-weight: 800;
 	background: $orange-light;
 	padding: rem(13px) rem(15px);
+	transition: all ease .2s;	
 	svg {
 		fill: $orange;
 	}
+
 	span {
 		color: $orange;
 		font-weight: 800;
+	}
+	&:hover {
+		background: $orange;
+		span {
+			color: $white;
+		}
+		svg {
+			fill: $white;
+			path {
+				stroke: $white;
+			}
+		}
 	}
 }
 
@@ -45,6 +59,10 @@
 	background: $orange;
 	color: $white;
 	height: 100%;
+	transition: all ease .2s;
+	&:hover {
+		background: darken($orange, 5)
+	}
 }
 
 
@@ -85,6 +103,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: all ease .2s;
+	&:hover {
+		background: #d0d0d0;
+	}
 }
 .left-icon {
 	svg {
@@ -107,6 +129,7 @@
 	font-family: SFProDisplay_400;
 	font-size: rem(13px);
 	line-height: rem(18px);
+	transition: all ease .2s;
 }
 
 .btn-orange-light {
@@ -134,6 +157,11 @@
 	line-height: rem(16px);
 	text-align: center;
 	color: $orange;
+	transition: all ease .2s;
+	&:hover {
+		color: $white;
+		background: $orange;
+	}
 }
 .btn-orange {
 	background: $orange;
@@ -142,6 +170,10 @@
 	padding: rem(14px) 0;
 	width: 100%;
 	font-family: SFProDisplay_400;
+	transition: all ease .2s;
+	&:hover {
+		background: darken($orange, 5)
+	}
 }
 
 .btn-black-big {
@@ -161,6 +193,11 @@
 	font-size: rem(15px);
 	line-height: rem(18px);
 	color: $orange;
+	transition: all ease .2s;
+	&:hover {
+		background: $orange;
+		color: $white;
+	}
 }
 
 .switch-btn {
@@ -227,5 +264,9 @@
 	border-radius: 3px;
 	svg {
 		margin-right: rem(14px);
+	}
+	transition: all ease .2s;
+	&:hover {
+		background: rgba(0, 0, 0, 0.2);
 	}
 }

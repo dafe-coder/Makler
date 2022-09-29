@@ -13,7 +13,7 @@
 		}}
 		button {
 			border-radius: 3px;
-			flex-basis: 50%;
+			width: 50%;
 		}
 	}
 	&-s {
@@ -78,6 +78,39 @@
 		}
 	}
 }
+
+.radio-btn-big {
+	width: 50%;
+	background: $white;
+	label {
+		padding: rem(14px);
+		cursor: pointer;
+		border-radius: 3px;
+		flex-basis: 50%;
+		background: $white;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		font-family: SFProDisplay_600;
+		font-size: rem(13px);
+		line-height: rem(16px);
+		text-align: center;
+		color: #0B0B0B;
+		transition: all ease .2s;
+	}
+
+	input {
+		display: none;
+
+		&:checked+label {
+			background: $orange;
+			color: $white;
+		}
+	}
+}
+
 .radio-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -193,12 +226,42 @@
 			font-size: rem(11px);
 		}
 	}
+	.files-name {
+		font-family: SFProDisplay_600;
+		font-size: rem(11px);
+		line-height: rem(13px);
+		color: #C56622;
+		span {
+			font-family: SFProDisplay_400;
+			color: #121212;
+			margin-left: rem(9px);
+		}
+	}
+	.cancel-actions {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		background:rgba(#FF0000, 0.3);
+		@include size(rem(24px));
+		svg {
+			width: 11px;
+			height: 11px;
+		}
+	}
 	.image-progress {
 		background: rgba($orange, 0.2);
 		padding: rem(13px) rem(10px);
 		border-radius: 3px;
 		margin: rem(15px) 0 rem(7px);
 		display: none;
+		&__left {
+			flex-grow: 1;
+		}
+		&__right {
+			flex-shrink: 0;
+			flex-grow: 0;
+		}
 		.progress-bar:after {
 			background: $orange;
 			-webkit-background-size: 40px 40px;

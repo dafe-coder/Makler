@@ -33,6 +33,18 @@ export function openChooseBody(selector) {
 				bodyChoose.classList.remove('active')
 			}
 		})
+		bodyChoose.querySelectorAll('li a').forEach((item) => {
+			item.addEventListener('click', (e) => {
+				const target = e.target
+				bodyChoose.querySelectorAll('li a').forEach((item) => {
+					item.classList.remove('active')
+				})
+				target.classList.add('active')
+				btnOpen.querySelector('span').innerHTML = target.innerHTML
+				bodyChoose.classList.remove('active')
+				btnOpen.classList.remove('active')
+			})
+		})
 	}
 }
 

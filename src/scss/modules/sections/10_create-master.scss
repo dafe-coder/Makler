@@ -159,6 +159,11 @@
 			border-radius: 50px;
 			padding: rem(5px) rem(10px);
 			cursor: pointer;
+			transition: all ease .2s;
+			&:hover {
+				background: $orange;
+				color: $white;
+			}
 		}
 		input {
 			display: none;
