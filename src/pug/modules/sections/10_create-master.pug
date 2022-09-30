@@ -65,9 +65,9 @@ section.create-master-s
 						.map-info
 							h5 Где находится?
 							.map-address
-								input(placeholder='г.Ташкент, ул.Охангарон 65 А 1')
-								button.btn.btn-black Сохранить
-						p.error-par Такой геолокации не существует
+								input(placeholder='г.Ташкент, ул.Охангарон 65 А 1' id="suggest")
+								button.btn.btn-black#save-address Сохранить
+						p.error-par.d-none Такой геолокации не существует
 						#map
 					.confirm-checkbox
 						input(type="checkbox" id= "confirm-data")

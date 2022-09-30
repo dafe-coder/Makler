@@ -21,12 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	chooseRoom('#choose-room')
 
-	renderMap()
-
 	dropImages('.image-outer')
 
 	openModal('#login-modal', '.login-modal')
-
+	renderMap()
 	var swiper = new Swiper('.swiper', {
 		pagination: {
 			el: '.swiper-pagination',
