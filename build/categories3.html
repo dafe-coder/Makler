@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Open product</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c5bd98ea-afd9-433c-909d-a54b6459fb30&amp;lang=ru_RU" type="text/javascript"></script><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+  </head>
+  <body class="master-page">
+    <div class="wrapper">
+      <header class="header"> 
+        <div class="container"> 
+          <div class="header-body">
+            <div class="header__left"><a href="/"><img src="img/logo_site2.png" alt="Makler"></a>
+              <ul class="breadcrumbs">
+                <li> <a href="/"> 
+                    <svg class="svg-sprite-icon icon-fi_arrow-left fill-n w-16 d-none">
+                      <use xlink:href="img/symbol/sprite.svg#fi_arrow-left"></use>
+                    </svg>
+                    <svg class="svg-sprite-icon icon-fi_home fill-n w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_home"></use>
+                    </svg></a></li>
+                <li> <a href="#">Ремонт</a></li>
+                <li> <a href="#">Сантехник</a></li>
+                <li> <a href="#">Abduvali Eshonqulov </a></li>
+              </ul>
+            </div>
+            <div class="header-nav">
+              <button class="hamburger hamburger--collapse" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+              <ul class="header-nav-list">
+                <li><a href="#">
+                    <svg class="svg-sprite-icon icon-fi_globe w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_globe"></use>
+                    </svg><span>Русский  </span></a></li>
+                <li> <a href="/save-products.html">
+                    <svg class="svg-sprite-icon icon-fi_heart w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_heart"></use>
+                    </svg></a></li>
+                <li> <a href="/cabinet.html">
+                    <svg class="svg-sprite-icon icon-fi_log-in w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_log-in"></use>
+                    </svg><span>Профиль </span></a></li>
+                <li><a class="btn btn-orange-text" href="/create-product.html"><svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 3.333v9.334M3.333 8h9.333" stroke="#C56622" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>разместить объявление</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="content">
+        <section class="masters-s">
+          <div class="nav-search"> 
+            <div class="container nav-search-container">	
+              <ul class="nav-search-body"> 
+                <li class="nav-search_how select-choose">
+                  <label>Как</label><a class="choose-btn choose-btn-round" href="#" id="choose-how"><span>Ремонт</span>
+                    <svg class="svg-sprite-icon icon-fi_chevron-down w-12">
+                      <use xlink:href="img/symbol/sprite.svg#fi_chevron-down"></use>
+                    </svg></a>
+                  <div class="nav-body-choose">
+                    <ul>
+                      <li> <a class="btn btn-orange-light active" href="#">Ремонт 	</a></li>
+                      <li> <a class="btn btn-orange-light" href="#">Строить 	</a></li>
+                      <li> <a class="btn btn-orange-light" href="#">Пилить 	</a></li>
+                      <li> <a class="btn btn-orange-light" href="#">Смотреть 	</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-search_type select-choose">
+                  <label>Тип</label><a class="choose-btn choose-btn-link" href="#" id="choose-type"><span>Деятельности мастера </span>
+                    <svg class="svg-sprite-icon icon-fi_chevron-down w-12">
+                      <use xlink:href="img/symbol/sprite.svg#fi_chevron-down"></use>
+                    </svg></a>
+                  <div class="nav-body-choose">
+                    <ul>
+                      <li> <a class="btn btn-orange-light active" href="#">Сантехник 	</a></li>
+                      <li> <a class="btn btn-orange-light" href="#">Ученный 	</a></li>
+                      <li> <a class="btn btn-orange-light" href="#">Программист </a></li>
+                    </ul>
+                    <ul>
+                      <li> <a class="btn btn-orange-light" href="#">Жених на час</a></li>
+                      <li> <a class="btn btn-orange-light" href="#">Застройщик</a></li>
+                      <li> <a class="btn btn-orange-light" href="#">Бухгалтер</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-search_address">
+                  <label>Адрес</label><a href="#"> 
+                    <svg class="svg-sprite-icon icon-fi_navigation w-16">
+                      <use xlink:href="img/symbol/sprite.svg#fi_navigation"></use>
+                    </svg><span>г.Ташкент, ул. Амир Темур 65 А дом </span></a>
+                </li>
+                <li> 
+                  <button class="btn show-btn-orange">Показать</button>
+                </li>
+              </ul><a class="btn btn-dark-gray icon-left" href="/create-master.html">
+                <svg class="svg-sprite-icon icon-fi_users fill-n w-16">
+                  <use xlink:href="img/symbol/sprite.svg#fi_users"></use>
+                </svg><span>Вы мастер?</span></a>
+            </div>
+          </div>
+          <div class="container"> 
+            <div class="masters"> 
+              <ul class="masters-list" id="masters-list"></ul>
+              <button class="btn btn-white btn-center" id="show-more">Показать ещё </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="footer__top"> 
+          <div class="container">
+            <div class="footer__top-body"><a href="/"> <img src="img/svg/logo-white.svg" alt="Makler"></a>
+              <ul> 
+                <li> <a href="#">Реклама дателям</a></li>
+                <li> <a href="#">Инструкции по публикации</a></li>
+                <li> <a href="#">Инструкции по публикации</a></li>
+              </ul>
+              <ul> 
+                <li> <a href="#">Помощь</a></li>
+                <li> <a href="#">Тех поддержка </a></li>
+                <li> <a href="#">+998 90 123-45-67</a></li>
+                <li> <a href="#">1187</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__center">
+          <div class="container">
+            <div class="footer__center-body"> 
+              <p>'Someday' is a disease that will take your dreams to the grave with you. Just do it and correct course along the way.</p>
+              <ul>
+                <li> <img src="img/svg/payme.svg" alt="payme"></li>
+                <li> <img src="img/svg/click.svg" alt="click"></li>
+                <li> <img src="img/svg/upay.svg" alt="upay"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container"> 
+            <div class="footer__bottom-body"> 
+              <ul> 
+                <li>
+                  <p>Copyright 2022 R</p>
+                </li>
+                <li><a class="line-link" href="#">Условия использование </a></li>
+                <li><a class="line-link" href="#">Политика конфеденциалности</a></li>
+              </ul>
+              <ul class="social-links">
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-fb w-12">
+                      <use xlink:href="img/symbol/sprite.svg#fb"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-inst w-12">
+                      <use xlink:href="img/symbol/sprite.svg#inst"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-telegram w-12">
+                      <use xlink:href="img/symbol/sprite.svg#telegram"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-tw w-12">
+                      <use xlink:href="img/symbol/sprite.svg#tw"></use>
+                    </svg></a></li>
+                <li><a href="#"> 
+                    <svg class="svg-sprite-icon icon-in w-12">
+                      <use xlink:href="img/symbol/sprite.svg#in"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/app.min.js"></script>
+  </body>
+</html>

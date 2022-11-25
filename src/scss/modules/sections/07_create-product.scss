@@ -337,6 +337,9 @@
 		grid-row-gap: rem(5px);
 		li {
 			height: rem(80px);
+			&:nth-child(1), &:nth-child(2), &:nth-child(3) {
+				margin-top: rem(5px);
+			}
 			img {
 				width: 100%;
 				height: 100%;
@@ -559,5 +562,85 @@
 		border-radius: 4px;
 		padding: rem(16px) rem(14px);
 		width: 100%;
+		font-weight: 400;
+		font-size: rem(13px);
+		line-height: rem(16px);
+		&::placeholder {
+			color: #0F1826;
+			opacity: 0.4;
+		}
+	}
+}
+
+.form-textarea  {
+	margin-bottom: rem(20px);
+	textarea {
+		background: #FFFFFF;
+		border: 1px solid #DEDEDE;
+		border-radius: 4px;
+		padding: rem(16px) rem(14px);
+		width: 100%;
+		height: rem(132px);
+		font-weight: 400;
+		font-size: rem(13px);
+		line-height: rem(16px);
+		&:active,
+		&:focus,
+		&:focus-visible {
+			outline: none;
+			outline-offset: 0;
+		}
+		&::placeholder {
+			color: #0F1826;
+			opacity: 0.4;
+		}
+	}
+	
+}
+
+#amenities-list {
+	img {
+		@include size(17px);
+		margin-right: rem(7px)
+	}
+}
+
+.form-price {
+	display: grid;
+	grid-template-columns: 1fr rem(120px);
+	gap: 10px;
+	margin-bottom: rem(30px);
+	input {
+		background: #FFFFFF;
+		border: 1px solid #DEDEDE;
+		border-radius: 4px;
+		padding: rem(14px);
+		font-weight: 400;
+		font-size: rem(13px);
+		line-height: rem(16px);
+		&::placeholder {
+			color: #0F1826;
+			opacity: 0.4
+		}
+	}
+	&-choose {
+		position: relative;
+	}
+	button {
+		width: 100%;
+		background: #FFFFFF;
+		border: 1px solid #DEDEDE;
+		border-radius: 4px;
+		cursor: pointer;
+		padding: rem(14px);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		span {
+			color: #0F1826;
+			opacity: 0.4
+		}
+		svg {
+		}
 	}
 }

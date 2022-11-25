@@ -1,58 +1,77 @@
 section.create-product-s 
 	.container 
 		.create-product 
-			.create-product__left
+			form#create-product.create-product__left
 				h2 Добавить новое <br>объявление
 				p.subtitle Объявление будет доступно на <a href='makler.uz'>Makler.uz</a> и в наших <br>мобильных приложениях
+				h5 Заголовка объявления
+				.form-input 
+					input(placeholder="пусто" id="title-product" type="text" required='true')
+				h5 Краткое описание 
+				.form-textarea 
+					textarea(placeholder="пусто" id="description-product" type="text" required='true')
+				h5 Цена
+				.form-price
+					input(type="number" placeholder='Стоимость' required='true' name='product-price')
+					.form-price-choose
+						button.choose-currency(type='button')#select-currency
+							span у.е
+							+icon('fi_chevron-down', 'fill-n w-12')
+						.nav-body-choose
+							ul
+								li 
+									a(href="#").btn.btn-orange-light.active y.e
+								li 
+									a(href="#").btn.btn-orange-light som
 				h5 Выберите тип объявления
 				.create-product-btns.mb-30
 					.radio-btn-big
-						input(type="radio" name="type-product" id="rent" checked="true")
+						input(type="radio" name="type-product" id="rent" checked="true" value='rent')
 						label(for="rent") Сдать в аренду
 					.radio-btn-big
-						input(type="radio" name="type-product" id="sale")
+						input(type="radio" name="type-product" id="sale" value='for_sale')
 						label(for="sale") Продажа недвижимости
 				h5 Тип аренды
 				ul.switch-list.mb-40
 					li.switch-btn 
-						input(type='radio' id='long' name="time" checked required)
+						input(type='radio' id='long' name="time" checked value='long_time')
 						label(for='long') Длительно
 					li.switch-btn  
-						input(type='radio' id='month' name="time" required)
+						input(type='radio' id='month' name="time" value='several_months')
 						label(for='month') На несколько месяцев
 					li.switch-btn 
-						input(type='radio' id='day' name="time" required)
+						input(type='radio' id='day' name="time" value='daily')
 						label(for='day') Посуточно
 				h5 Тип недвижимости
 				ul.radio-list.mb-60
 					li.radio-btn 
-						input(type='radio' id='living' name="type" checked required)
+						input(type='radio' id='living' name="type" checked)
 						label(for='living') Жилая	
 					li.radio-btn 
-						input(type='radio' id='commercial' name="type" required)
+						input(type='radio' id='commercial' name="type")
 						label(for='commercial') Коммерческая	
 				h5 Объект
 				ul.radio-list.mb-50
 					li.radio-btn 
-						input(type="radio" id='flat' name='object' required)
+						input(type="radio" id='flat' name='object' checked value='flat')
 						label(for='flat') Квартира
 					li.radio-btn 
-						input(type="radio" id='room' name='object' required)
+						input(type="radio" id='room' name='object' value='room')
 						label(for='room') Комната
 					li.radio-btn 
-						input(type="radio" id='dacha' name='object' required)
+						input(type="radio" id='dacha' name='object' value='summer_cottage')
 						label(for='dacha') Дача
 					li.radio-btn 
-						input(type="radio" id='house' name='object' required)
+						input(type="radio" id='house' name='object' value='house')
 						label(for='house') Дом
 					li.radio-btn 
-						input(type="radio" id='part' name='object' required)
+						input(type="radio" id='part' name='object' value='part_house')
 						label(for='part') Часть дома
 					li.radio-btn 
-						input(type="radio" id='townhouse' name='object' required)
+						input(type="radio" id='townhouse' name='object' value='townhouse')
 						label(for='townhouse') Таунхаус
 					li.radio-btn 
-						input(type="radio" id='some' name='object' required)
+						input(type="radio" id='some' name='object' value='bed_space')
 						label(for='some') Койко-место
 				h5 Расположение
 				.map.mb-50
@@ -71,38 +90,38 @@ section.create-product-s
 							p Поддерживает: .jpg, .png, .jpeg
 						input(type="file" name="files" id='upload-images' accept="image/png, image/jpeg, image/jpg" multiple)
 						label(for='upload-images' ) открыть
-					.image-progress 
-						.image-progress__left
-							.files-name Uploading...
-								span img128371.jpg
-							.progress
-								progress(id="progress-bar")
-								.progress-bg
-									.progress-bar
-						.image-progress__right
-							button.btn.cancel-actions
-								+icon('fi_x')
+					//- .image-progress 
+					//- 	.image-progress__left
+					//- 		.files-name Uploading...
+					//- 			span img128371.jpg
+					//- 		.progress
+					//- 			progress(id="progress-bar")
+					//- 			.progress-bg
+					//- 				.progress-bar
+					//- 	.image-progress__right
+					//- 		button.btn.cancel-actions
+					//- 			+icon('fi_x')
 					ul.image-list#gallery
 				h5 Вся информация об объекте
 				.sizes.mb-50
 					p Площадь, м² *
 					.sizes-inputs
-						input(placeholder='Общая' type='number')
-						input(placeholder='Жилая' type='number')
-						input(placeholder='Кухня' type='number')
+						input(placeholder='Общая' type='number' id='general' required='true')
+						input(placeholder='Жилая' type='number' required='true')
+						input(placeholder='Кухня' type='number' required='true')
 					.sizes-input 
 						label Количество комнат *
-						input(placeholder='Общая' type='number')
+						input(placeholder='Общая' name="number_of_rooms" type='number' required='true')
 					.sizes-input 
 						label Этаж*
-						input(placeholder='Общая' type='number')
+						input(placeholder='Общая' name='floor' type='number' required='true')
 					.sizes-input 
 						label Этаж из*
-						input(placeholder='Общая' type='number')
+						input(placeholder='Общая' name="floor_of" type='number' required='true')
 				h5 Тип строения
 				ul.radio-list.mb-50
 					li.radio-btn 
-						input(type="radio" id='type-brick' name='type-building')
+						input(type="radio" id='type-brick' name='type-building' checked)
 						label(for='type-brick') Кирпич
 					li.radio-btn 
 						input(type="radio" id='type-monolith' name='type-building')
@@ -142,42 +161,42 @@ section.create-product-s
 								input(type="radio" id='furnishings-no' name='furnishings')
 								label(for='furnishings-no') нет 
 				h5 Все удобства
-				ul.checkbox-list.mb-40
-					li.checkbox-btn
-						input(type="checkbox" id="comfort-long")
-						label(for="comfort-long") 
-							+icon('tags-1', 'w-16')
-							span Долгосрочная аренда
-					li.checkbox-btn
-						input(type="checkbox" id="comfort-family")
-						label(for="comfort-family") 
-							+icon('tags-2', 'w-16')
-							span Family
-					li.checkbox-btn
-						input(type="checkbox" id="comfort-room")
-						label(for="comfort-room") 
-							+icon('tags-3', 'w-16')
-							span 3 room
-					li.checkbox-btn
-						input(type="checkbox" id="comfort-notarius")
-						label(for="comfort-notarius") 
-							+icon('tags-4', 'w-16')
-							span Нотариус
-					li.checkbox-btn
-						input(type="checkbox" id="comfort-tv")
-						label(for="comfort-tv") 
-							+icon('tags-5', 'w-16')
-							span TV
-					li.checkbox-btn
-						input(type="checkbox" id="comfort-cart")
-						label(for="comfort-cart") 
-							+icon('tags-6', 'w-16')
-							span Рядом Корзинка
-					li.checkbox-btn
-						input(type="checkbox" id="comfort-wifi")
-						label(for="comfort-wifi") 
-							+icon('tags-7', 'w-16')
-							span Wi-Fi
+				ul.checkbox-list.mb-40#amenities-list
+					//- li.checkbox-btn
+					//- 	input(type="checkbox" id="comfort-long" name="amenities" value="Долгосрочная аренда")
+					//- 	label(for="comfort-long") 
+					//- 		+icon('tags-1', 'w-16')
+					//- 		span Долгосрочная аренда
+					//- li.checkbox-btn
+					//- 	input(type="checkbox" id="comfort-family" name="amenities" value="Family")
+					//- 	label(for="comfort-family") 
+					//- 		+icon('tags-2', 'w-16')
+					//- 		span Family
+					//- li.checkbox-btn
+					//- 	input(type="checkbox" id="comfort-room" name="amenities" value="3 room")
+					//- 	label(for="comfort-room") 
+					//- 		+icon('tags-3', 'w-16')
+					//- 		span 3 room
+					//- li.checkbox-btn
+					//- 	input(type="checkbox" id="comfort-notarius" name="amenities" value="Нотариус")
+					//- 	label(for="comfort-notarius") 
+					//- 		+icon('tags-4', 'w-16')
+					//- 		span Нотариус
+					//- li.checkbox-btn
+					//- 	input(type="checkbox" id="comfort-tv" name="amenities" value="TV")
+					//- 	label(for="comfort-tv") 
+					//- 		+icon('tags-5', 'w-16')
+					//- 		span TV
+					//- li.checkbox-btn
+					//- 	input(type="checkbox" id="comfort-cart" name="amenities" value="Рядом Корзинка")
+					//- 	label(for="comfort-cart") 
+					//- 		+icon('tags-6', 'w-16')
+					//- 		span Рядом Корзинка
+					//- li.checkbox-btn
+					//- 	input(type="checkbox" id="comfort-wifi" name="amenities" value="Wi-Fi")
+					//- 	label(for="comfort-wifi") 
+					//- 		+icon('tags-7', 'w-16')
+					//- 		span Wi-Fi
 				.confirm-checkbox
 					input(type="checkbox" id= "confirm-data")
 					label(for='confirm-data') 

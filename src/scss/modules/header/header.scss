@@ -13,6 +13,11 @@
 		& > * {&:not(:last-child) {
 			margin-right: rem(40px);
 		}}
+		a {
+			img {
+				width: 150px;
+			}
+		}
 	}
 	&-nav {
 		display: flex;
@@ -65,7 +70,6 @@
 					fill: $white;
 				}
 			}
-			margin-right: rem(43px);
 		}
 	}
 }

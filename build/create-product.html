@@ -11,12 +11,12 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=c5bd98ea-afd9-433c-909d-a54b6459fb30&amp;lang=ru_RU" type="text/javascript"></script><!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
   </head>
-  <body class="index-page">
+  <body class="create-product-page">
     <div class="wrapper">
       <header class="header"> 
         <div class="container"> 
           <div class="header-body">
-            <div class="header__left"><a href="/"><img src="img/svg/logo.svg" alt="Makler"></a>
+            <div class="header__left"><a href="/"><img src="img/logo_site2.png" alt="Makler"></a>
               <ul class="breadcrumbs">
                 <li> <a href="/"> 
                     <svg class="svg-sprite-icon icon-fi_arrow-left fill-n w-16 d-none">
@@ -55,74 +55,99 @@
         <section class="create-product-s"> 
           <div class="container"> 
             <div class="create-product"> 
-              <div class="create-product__left">
+              <form class="create-product__left" id="create-product">
                 <h2>Добавить новое <br>объявление</h2>
                 <p class="subtitle">Объявление будет доступно на <a href='makler.uz'>Makler.uz</a> и в наших <br>мобильных приложениях</p>
+                <h5>Заголовка объявления</h5>
+                <div class="form-input"> 
+                  <input placeholder="пусто" id="title-product" type="text" required="true">
+                </div>
+                <h5>Краткое описание </h5>
+                <div class="form-textarea"> 
+                  <textarea placeholder="пусто" id="description-product" type="text" required="true"></textarea>
+                </div>
+                <h5>Цена</h5>
+                <div class="form-price">
+                  <input type="number" placeholder="Стоимость" required="true" name="product-price">
+                  <div class="form-price-choose">
+                    <button class="choose-currency" type="button" id="select-currency"><span>у.е</span>
+                      <svg class="svg-sprite-icon icon-fi_chevron-down fill-n w-12">
+                        <use xlink:href="img/symbol/sprite.svg#fi_chevron-down"></use>
+                      </svg>
+                    </button>
+                    <div class="nav-body-choose">
+                      <ul>
+                        <li> <a class="btn btn-orange-light active" href="#">y.e</a></li>
+                        <li> <a class="btn btn-orange-light" href="#">som</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
                 <h5>Выберите тип объявления</h5>
                 <div class="create-product-btns mb-30">
                   <div class="radio-btn-big">
-                    <input type="radio" name="type-product" id="rent" checked="true">
+                    <input type="radio" name="type-product" id="rent" checked="true" value="rent">
                     <label for="rent">Сдать в аренду</label>
                   </div>
                   <div class="radio-btn-big">
-                    <input type="radio" name="type-product" id="sale">
+                    <input type="radio" name="type-product" id="sale" value="for_sale">
                     <label for="sale">Продажа недвижимости</label>
                   </div>
                 </div>
                 <h5>Тип аренды</h5>
                 <ul class="switch-list mb-40">
                   <li class="switch-btn"> 
-                    <input type="radio" id="long" name="time" checked required>
+                    <input type="radio" id="long" name="time" checked value="long_time">
                     <label for="long">Длительно</label>
                   </li>
                   <li class="switch-btn"> 
-                    <input type="radio" id="month" name="time" required>
+                    <input type="radio" id="month" name="time" value="several_months">
                     <label for="month">На несколько месяцев</label>
                   </li>
                   <li class="switch-btn"> 
-                    <input type="radio" id="day" name="time" required>
+                    <input type="radio" id="day" name="time" value="daily">
                     <label for="day">Посуточно</label>
                   </li>
                 </ul>
                 <h5>Тип недвижимости</h5>
                 <ul class="radio-list mb-60">
                   <li class="radio-btn"> 
-                    <input type="radio" id="living" name="type" checked required>
+                    <input type="radio" id="living" name="type" checked>
                     <label for="living">Жилая	</label>
                   </li>
                   <li class="radio-btn"> 
-                    <input type="radio" id="commercial" name="type" required>
+                    <input type="radio" id="commercial" name="type">
                     <label for="commercial">Коммерческая	</label>
                   </li>
                 </ul>
                 <h5>Объект</h5>
                 <ul class="radio-list mb-50">
                   <li class="radio-btn"> 
-                    <input type="radio" id="flat" name="object" required>
+                    <input type="radio" id="flat" name="object" checked value="flat">
                     <label for="flat">Квартира</label>
                   </li>
                   <li class="radio-btn"> 
-                    <input type="radio" id="room" name="object" required>
+                    <input type="radio" id="room" name="object" value="room">
                     <label for="room">Комната</label>
                   </li>
                   <li class="radio-btn"> 
-                    <input type="radio" id="dacha" name="object" required>
+                    <input type="radio" id="dacha" name="object" value="summer_cottage">
                     <label for="dacha">Дача</label>
                   </li>
                   <li class="radio-btn"> 
-                    <input type="radio" id="house" name="object" required>
+                    <input type="radio" id="house" name="object" value="house">
                     <label for="house">Дом</label>
                   </li>
                   <li class="radio-btn"> 
-                    <input type="radio" id="part" name="object" required>
+                    <input type="radio" id="part" name="object" value="part_house">
                     <label for="part">Часть дома</label>
                   </li>
                   <li class="radio-btn"> 
-                    <input type="radio" id="townhouse" name="object" required>
+                    <input type="radio" id="townhouse" name="object" value="townhouse">
                     <label for="townhouse">Таунхаус</label>
                   </li>
                   <li class="radio-btn"> 
-                    <input type="radio" id="some" name="object" required>
+                    <input type="radio" id="some" name="object" value="bed_space">
                     <label for="some">Койко-место</label>
                   </li>
                 </ul>
@@ -148,51 +173,33 @@
                     <input type="file" name="files" id="upload-images" accept="image/png, image/jpeg, image/jpg" multiple>
                     <label for="upload-images">открыть</label>
                   </div>
-                  <div class="image-progress"> 
-                    <div class="image-progress__left">
-                      <div class="files-name">Uploading...<span>img128371.jpg</span></div>
-                      <div class="progress">
-                        <progress id="progress-bar"></progress>
-                        <div class="progress-bg">
-                          <div class="progress-bar"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="image-progress__right">
-                      <button class="btn cancel-actions">
-                        <svg class="svg-sprite-icon icon-fi_x">
-                          <use xlink:href="img/symbol/sprite.svg#fi_x"></use>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
                   <ul class="image-list" id="gallery"></ul>
                 </div>
                 <h5>Вся информация об объекте</h5>
                 <div class="sizes mb-50">
                   <p>Площадь, м² *</p>
                   <div class="sizes-inputs">
-                    <input placeholder="Общая" type="number">
-                    <input placeholder="Жилая" type="number">
-                    <input placeholder="Кухня" type="number">
+                    <input placeholder="Общая" type="number" id="general" required="true">
+                    <input placeholder="Жилая" type="number" required="true">
+                    <input placeholder="Кухня" type="number" required="true">
                   </div>
                   <div class="sizes-input"> 
                     <label>Количество комнат *</label>
-                    <input placeholder="Общая" type="number">
+                    <input placeholder="Общая" name="number_of_rooms" type="number" required="true">
                   </div>
                   <div class="sizes-input"> 
                     <label>Этаж*</label>
-                    <input placeholder="Общая" type="number">
+                    <input placeholder="Общая" name="floor" type="number" required="true">
                   </div>
                   <div class="sizes-input"> 
                     <label>Этаж из*</label>
-                    <input placeholder="Общая" type="number">
+                    <input placeholder="Общая" name="floor_of" type="number" required="true">
                   </div>
                 </div>
                 <h5>Тип строения</h5>
                 <ul class="radio-list mb-50">
                   <li class="radio-btn"> 
-                    <input type="radio" id="type-brick" name="type-building">
+                    <input type="radio" id="type-brick" name="type-building" checked>
                     <label for="type-brick">Кирпич</label>
                   </li>
                   <li class="radio-btn"> 
@@ -250,64 +257,7 @@
                   </li>
                 </ul>
                 <h5>Все удобства</h5>
-                <ul class="checkbox-list mb-40">
-                  <li class="checkbox-btn">
-                    <input type="checkbox" id="comfort-long">
-                    <label for="comfort-long"> 
-                      <svg class="svg-sprite-icon icon-tags-1 w-16">
-                        <use xlink:href="img/symbol/sprite.svg#tags-1"></use>
-                      </svg><span>Долгосрочная аренда</span>
-                    </label>
-                  </li>
-                  <li class="checkbox-btn">
-                    <input type="checkbox" id="comfort-family">
-                    <label for="comfort-family"> 
-                      <svg class="svg-sprite-icon icon-tags-2 w-16">
-                        <use xlink:href="img/symbol/sprite.svg#tags-2"></use>
-                      </svg><span>Family</span>
-                    </label>
-                  </li>
-                  <li class="checkbox-btn">
-                    <input type="checkbox" id="comfort-room">
-                    <label for="comfort-room"> 
-                      <svg class="svg-sprite-icon icon-tags-3 w-16">
-                        <use xlink:href="img/symbol/sprite.svg#tags-3"></use>
-                      </svg><span>3 room</span>
-                    </label>
-                  </li>
-                  <li class="checkbox-btn">
-                    <input type="checkbox" id="comfort-notarius">
-                    <label for="comfort-notarius"> 
-                      <svg class="svg-sprite-icon icon-tags-4 w-16">
-                        <use xlink:href="img/symbol/sprite.svg#tags-4"></use>
-                      </svg><span>Нотариус</span>
-                    </label>
-                  </li>
-                  <li class="checkbox-btn">
-                    <input type="checkbox" id="comfort-tv">
-                    <label for="comfort-tv"> 
-                      <svg class="svg-sprite-icon icon-tags-5 w-16">
-                        <use xlink:href="img/symbol/sprite.svg#tags-5"></use>
-                      </svg><span>TV</span>
-                    </label>
-                  </li>
-                  <li class="checkbox-btn">
-                    <input type="checkbox" id="comfort-cart">
-                    <label for="comfort-cart"> 
-                      <svg class="svg-sprite-icon icon-tags-6 w-16">
-                        <use xlink:href="img/symbol/sprite.svg#tags-6"></use>
-                      </svg><span>Рядом Корзинка</span>
-                    </label>
-                  </li>
-                  <li class="checkbox-btn">
-                    <input type="checkbox" id="comfort-wifi">
-                    <label for="comfort-wifi"> 
-                      <svg class="svg-sprite-icon icon-tags-7 w-16">
-                        <use xlink:href="img/symbol/sprite.svg#tags-7"></use>
-                      </svg><span>Wi-Fi</span>
-                    </label>
-                  </li>
-                </ul>
+                <ul class="checkbox-list mb-40" id="amenities-list"></ul>
                 <div class="confirm-checkbox">
                   <input type="checkbox" id="confirm-data">
                   <label for="confirm-data"> 
@@ -321,7 +271,7 @@
                   <button class="btn btn-black">Сохранить как черновик</button>
                   <button class="btn btn-orange">Опубликовать объявление </button>
                 </div>
-              </div>
+              </form>
               <div class="create-product__right">
                 <h5>Контактная информация</h5>
                 <div class="form">

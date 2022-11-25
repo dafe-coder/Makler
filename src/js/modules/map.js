@@ -35,7 +35,6 @@ export default function renderMap() {
 							],
 							18
 						)
-						console.log(response)
 
 						myMap.geoObjects.removeAll()
 
